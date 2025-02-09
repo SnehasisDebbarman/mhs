@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                         <p className='text-center w-12 text-[8px]'>Affiliated to <br /> <strong className='text-center'>CBSE</strong></p>
 
                     </div>
-                    <div className="sm:w-1/2  grid grid-cols-2 gap-8 sm:gap-12 sm:grid-cols-2">
+                    <div className="sm:w-1/2  grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-[#FBECC6] uppercase border-b border-b-white/60 pb-2">Contact Us</h2>
                             <ul className="text-gray-500  font-medium">

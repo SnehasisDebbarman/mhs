@@ -1,5 +1,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+import useMobileView from "../hooks/useMobileView";
 
 const LifeAtMHS = () => {
     return (
@@ -13,24 +14,26 @@ const LifeAtMHS = () => {
 
 const HorizontalScrollCarousel = () => {
     const targetRef = useRef<HTMLDivElement | null>(null);
+    const isMobile = useMobileView();
     const { scrollYProgress } = useScroll({
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["20%", "-70%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["30%", "-40%"]);
+    const mobileX = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
     return (
         <section ref={targetRef} className="relative h-[350vh] mx-auto py-18 text-black ">
             <div className="sticky top-0 flex flex-col h-screen  overflow-hidden bg-cover bg-center px-8  " >
                 {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black opacity-100 z-10"></div> */}
-                <div className="max-w-6xl mx-auto h-screen flex flex-col pt-20 z-20">
-                    <p className="text-[#7B057B] pt-10 ">Life At MHS</p>
-                    <h3 className="text-5xl spectral-regular text-black pt-5 pb-6  md:w-1/3">What's
+                <div className="max-w-6xl mx-auto h-screen flex flex-col pt-2 sm:pt-20 z-20">
+                    <p className="text-[#7B057B] pt-4 sm:pt-10 ">Life At MHS</p>
+                    <h3 className="text-xl sm:text-5xl spectral-regular text-black py-2 sm:py-6  md:w-1/3">What's
                         Happening?</h3>
-                    <p className="md:w-1/3">Discover what makes MHS unique—an outstanding location in the heart of Sikar and an exciting place where children learn and grow through our personalized approach to teaching and learning.</p>
+                    <p className="text-sm sm:text-base sm:w-1/3">Discover what makes MHS unique—an outstanding location in the heart of Sikar and an exciting place where children learn and grow through our personalized approach to teaching and learning.</p>
                     <div className="my-8 rounded-full text-[#7B057B] bg-white p-2 px-5 float-left max-w-max">key highlights</div>
 
-                    <motion.div style={{ x }} className="absolute flex gap-4">
+                    <motion.div style={{ x: isMobile ? mobileX : x }} className="absolute flex gap-4 top-80 sm:top-40">
                         {cards.map((card) => {
                             return <Card card={card} key={card.id} />;
                         })}
@@ -44,10 +47,10 @@ const HorizontalScrollCarousel = () => {
 const Card = ({ card }: { card: CardType }) => {
     return (
         <div className="relative">
-            <div className="group absolute -top-2 -left-2 h-[50vh] min-w-[400px] overflow-hidden bg-purple-400 z-10"></div>
+            <div className="group absolute -top-2 -left-2 h-[50vh] min-w-[300px] sm:min-w-[400px] overflow-hidden bg-purple-400 z-10"></div>
             <div
                 key={card.id}
-                className="group relative h-[50vh] min-w-[400px] overflow-hidden bg-neutral-200 z-20"
+                className="group relative h-[50vh] min-w-[300px] sm:min-w-[400px] overflow-hidden bg-neutral-200 z-20"
             >
 
                 <div

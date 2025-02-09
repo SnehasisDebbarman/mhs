@@ -1,7 +1,12 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import highlight_bg from "../assets/highlight_bg.png";
 import useMobileView from "../hooks/useMobileView";
+
+import first from "../assets/highlights/first.png"
+import qoute_left from "../assets/highlights/quote_left.png"
+import quote_right from "../assets/highlights/quote_right.png"
+import start from "../assets/highlights/start.png"
 
 const Example = () => {
     return (
@@ -21,7 +26,7 @@ const HorizontalScrollCarousel = () => {
     });
 
     const x = useTransform(scrollYProgress, [0, 1], ["70%", "-20%"]);
-    const mobileX = useTransform(scrollYProgress, [0, 1], ["10%", "-200%"]);
+    const mobileX = useTransform(scrollYProgress, [0, 1], ["10%", "-250%"]);
 
     return (
         <section ref={targetRef} className="relative h-[400vh] sm:h-[350vh] mx-auto   ">
@@ -30,7 +35,7 @@ const HorizontalScrollCarousel = () => {
             }}>
                 <div className="max-w-6xl px-5 sm:px-72  ">
                     <h3 className="text-xl sm:text-5xl spectral-regular pt-10 pb-6">Unlocking Your Child’s Full Potential at MHS Junior School with MIT</h3>
-                    <p className="text-[12px] sm:text-sm">We pioneer the MIT Model in Sikar, blending innovation with tradition to foster a dynamic learning environment that nurtures each child's unique potential through exceptional teaching. At MHS, students discover their passions and what inspires them, laying the foundation for success in school, work, and life. Our curriculum integrates diverse intelligences—linguistic, musical, spatial, bodily-kinesthetic, interpersonal, intrapersonal, naturalistic, and existential—to create a holistic and engaging learning experience.</p>
+                    <p className="text-[14px] sm:text-sm">We pioneer the MIT Model in Sikar, blending innovation with tradition to foster a dynamic learning environment that nurtures each child's unique potential through exceptional teaching. At MHS, students discover their passions and what inspires them, laying the foundation for success in school, work, and life. Our curriculum integrates diverse intelligences—linguistic, musical, spatial, bodily-kinesthetic, interpersonal, intrapersonal, naturalistic, and existential—to create a holistic and engaging learning experience.</p>
                     <div className="my-8 rounded-full text-[#7B057B] bg-white p-2 px-5 float-left max-w-max">key highlights</div>
                 </div>
 
@@ -48,19 +53,14 @@ const Card = ({ card }: { card: CardType }) => {
     return (
         <div
             key={card.id}
-            className="group relative  sm:h-[150px] min-w-[100px] sm:min-w-[100px] overflow-hidden bg-neutral-200"
+            className="group relative  sm:h-[150px] min-w-[200px] sm:min-w-[200px] overflow-hidden bg-neutral-200 p-5 rounded-lg"
         >
-            <div
-                style={{
-                    backgroundImage: `url(${card.url})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-                className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-            ></div>
+
+
+            <img src={card.url} alt={card.title} className=" inset-0 z-0 mb-2 h-10 " />
             <div className=" inset-0 z-10 grid place-content-center">
-                <p className="bg-gradient-to-br from-white/20 to-white/0 p-8  font-black uppercase text-white backdrop-blur-lg">
-                    {card.title} hellp
+                <p className="text-[10px]   text-black ">
+                    {card.description}
                 </p>
             </div>
         </div>
@@ -72,43 +72,46 @@ export default Example;
 type CardType = {
     url: string;
     title: string;
+    description: string | React.JSX.Element;
     id: number;
 };
 
 const cards: CardType[] = [
     {
-        url: "/imgs/abstract/1.jpg",
+        url: first,
         title: "Title 1",
+        description: <p>Sikar’s School Focused on the <strong> MIT Model</strong></p>,
         id: 1,
     },
     {
-        url: "/imgs/abstract/2.jpg",
+        url: qoute_left,
         title: "Title 2",
+        description: <p>An Outstanding School in the heart of Sikar, offering an exceptional <strong>education for boys and girls aged 2 to 18</strong> </p>,
         id: 2,
     },
     {
-        url: "/imgs/abstract/3.jpg",
+        url: start,
         title: "Title 3",
+        description: <p> <strong>Our aims</strong> to ensure each and every child finds their spark, lighting the fire to fuel a lifetime’s achievement</p>,
         id: 3,
     },
     {
-        url: "/imgs/abstract/4.jpg",
+        url: qoute_left,
         title: "Title 4",
+        description: <p>A Curriculum <strong>Designed for Every Child’s Success</strong> for a fast-changing world</p>,
         id: 4,
     },
     {
-        url: "/imgs/abstract/5.jpg",
+        url: start,
         title: "Title 5",
+        description: <p><strong>Guided by industry experts and IIT/IIM alumni</strong>, we empower students to excel academically and develop key life skills</p>,
         id: 5,
     },
     {
-        url: "/imgs/abstract/6.jpg",
+        url: quote_right,
         title: "Title 6",
+        description: <p><strong>Join us</strong> in this exciting journey of discovery and growth of child</p>,
         id: 6,
     },
-    {
-        url: "/imgs/abstract/7.jpg",
-        title: "Title 7",
-        id: 7,
-    },
+
 ];
