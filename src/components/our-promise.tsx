@@ -48,14 +48,14 @@ const OurPromise: React.FC = () => {
                     Book a Visit
                 </motion.button>
             </div>
-            <div className="md:w-2/3 flex items-center justify-center h-1/3 p-4">
+            <div className="md:w-2/3 flex items-center justify-center h-1/3 p-4 ">
                 <motion.img
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     src={our_promise}
                     alt="Student"
-                    className=" w-3/4 aspect-square object-cover rounded-lg shadow-md"
+                    className=" sm:w-3/4 aspect-square object-cover rounded-lg shadow-md"
                 />
             </div>
         </div >

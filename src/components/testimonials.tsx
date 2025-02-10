@@ -4,6 +4,15 @@ import useMobileView from '../hooks/useMobileView';
 import shipra from "../assets/testimonial/shipra.png"
 import meena from "../assets/testimonial/meena.png"
 
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "../components/ui/carousel"
+
+
 
 interface Testimonial {
     name: string;
@@ -40,7 +49,7 @@ const ParentTestimonials: React.FC = () => {
     const isMobile = useMobileView()
     return (
         <div className="container mx-auto p-4 max-w-6xl pb-40">
-            <h1 className="text-2xl spectral-regular sm:text-3xl font-bold text-center mb-8 text-black">What Parents Says</h1>
+            <h1 className="text-6xl spectral-regular sm:text-3xl font-bold text-center mb-8 text-black">What Parents Says</h1>
             {
                 !isMobile ?
 
@@ -68,7 +77,38 @@ const ParentTestimonials: React.FC = () => {
                         ))}
                     </div>
                     :
-                    <></>
+                    <div className='bg-[#FEF0FE] w-full flex justify-center p-10 rounded-lg'>
+                        <Carousel>
+                            <CarouselContent>
+
+                                {testimonials.map((testimonial, index) => (
+                                    <CarouselItem
+                                        key={index}
+                                        className=""
+                                    >
+                                        <div className='flex gap-5 w-2/3'>
+                                            <img
+                                                src={testimonial.imageSrc}
+                                                alt={testimonial.name}
+                                                className="w-12 h-12 rounded-full mb-4"
+                                            />
+                                            <div>
+                                                <h2 className=" font-semibold mb-1 text-black">{testimonial.name}</h2>
+                                                <p className="text-gray-600 mb-2 text-sm">{testimonial.role}</p>
+                                            </div>
+                                        </div>
+
+
+                                        <p className="text-gray-800 text-sm">{testimonial.testimonial}</p>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                            <CarouselPrevious className='mt-10 mr-2 bg-[#B508B5]' />
+                            <CarouselNext className='mt-10  bg-[#B508B5]' />
+                        </Carousel>
+
+
+                    </div>
 
             }
 

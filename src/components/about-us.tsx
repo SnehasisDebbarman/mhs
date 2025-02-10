@@ -31,7 +31,7 @@ function AboutUs() {
                 <img
                     src={about_us}
                     alt="Placeholder"
-                    className="sticky top-10 w-full h-[80vh] object-cover rounded-sm"
+                    className="sticky top-10 w-full sm:h-[80vh] object-cover rounded-sm"
                 />
             </motion.div>
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import mhs_logo from '../assets/mhs_logo.png';
 import cbse_logo from '../assets/cbse_logo.png';
+import send from "../assets/footer/Send.svg"
+import prospectus from "../assets/footer/prospectus.svg"
 
 const Footer: React.FC = () => {
     return (
@@ -20,15 +22,15 @@ const Footer: React.FC = () => {
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-[#FBECC6] uppercase border-b border-b-white/60 pb-2">Contact Us</h2>
                             <ul className="text-gray-500  font-medium">
-                                <li className="mb-4">
+                                <li className="mb-2">
                                     Jaipur-Bikaner Bypass, Gokulpura, Sikar
                                 </li>
-                                <li className='mb-4'>
+                                <li className='mb-2'>
                                     1800-01572-299
                                 </li>
-                                <li className='mb-4'>Info@mhs.com</li>
+                                <li className='mb-2'>Info@mhs.com</li>
 
-                                <li className='mb-4'>
+                                <li className='mb-2'>
                                     <div className="flex mt-4  sm:mt-0 p-2">
                                         <a href="#" className="text-gray-500 hover:text-gray-900 bg-white rounded-full p-2">
                                             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#7B057B" viewBox="0 0 8 19">
@@ -63,31 +65,37 @@ const Footer: React.FC = () => {
                                     </div>
                                 </li>
                                 <li>
-                                    <button className='bg-[#B508B5] text-white rounded-full px-6 py-2 text-sm'>Download Prospectus</button>
+                                    <button className='bg-[#B508B5] text-white rounded-full px-6 py-2 text-sm flex gap-3 items-center'>
+                                        <img className='h-8' src={prospectus} alt="prospectus" />
+                                        <p>Download Prospectus</p>
+                                    </button>
                                 </li>
                             </ul>
                         </div>
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-[#FBECC6]  uppercase border-b border-b-white/60 pb-2 ">Quick Link</h2>
                             <ul className="text-gray-500  font-medium">
-                                <li className="mb-4">
+                                <li className="mb-2">
                                     Book a Visit
                                 </li>
-                                <li className="mb-4">
+                                <li className="mb-2">
                                     Apply for Admission
                                 </li>
-                                <li className="mb-4">
+                                <li className="mb-2">
                                     Contact
                                 </li>
-                                <li className="mb-4">
+                                <li className="mb-2">
                                     Privacy Policy
                                 </li>
-                                <li className="mb-4 text-transparent">
+                                <li className="mb-2 text-transparent">
                                     {"Home"}
                                 </li>
 
                                 <li>
-                                    <button className='bg-[#B508B5] text-white rounded-full px-6 py-2 text-sm'>Download Prospectus</button>
+                                    <button className='bg-[#B508B5] text-white rounded-full px-6 py-2 text-sm flex gap-3 items-center'>
+                                        <img className="h-8" src={send} alt="send" />
+                                        <p> Get Directions</p>
+                                    </button>
                                 </li>
 
 
