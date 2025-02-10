@@ -29,34 +29,36 @@ const containerVariants = {
 };
 const Header = () => {
     return (<motion.header
-        className="absolute z-20  w-[100vw] px-5  py-4 flex justify-between items-center "
+        className="absolute z-20  w-[100vw] flex justify-between sm:px-20 "
         variants={containerVariants}
     >
-        <motion.div
-            className="flex items-center"
-            variants={fadeUpVariants}
-        >
-            <img src={mhs_logo} alt="School Logo" className="w-28" />
-        </motion.div>
-        <motion.div
-            className="flex flex-col  md:flex-row items-center gap-4"
-            variants={containerVariants}
-        >
+        <div className='max-w-6xl w-full px-5  py-4 flex justify-between items-center '>
             <motion.div
-                className="text-white font-extralight text-sm"
+                className="flex items-center"
                 variants={fadeUpVariants}
             >
-                Talk to Us | <span className="font-bold">1800-112-110</span>
+                <img src={mhs_logo} alt="School Logo" className="w-28" />
             </motion.div>
-            <motion.button
-                className="text-[#7B057B] bg-white text-sm font-semibold px-6 py-2 rounded-full hover:bg-purple-700 transition-colors"
-                variants={fadeUpVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <motion.div
+                className="flex flex-col  md:flex-row items-center gap-4"
+                variants={containerVariants}
             >
-                Apply Now
-            </motion.button>
-        </motion.div>
+                <motion.div
+                    className="text-white font-extralight text-sm"
+                    variants={fadeUpVariants}
+                >
+                    Talk to Us | <span className="font-bold">1800-112-110</span>
+                </motion.div>
+                <motion.button
+                    className="text-[#7B057B] bg-white text-sm font-semibold px-6 py-2 rounded-full hover:bg-purple-700 transition-colors"
+                    variants={fadeUpVariants}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    Apply Now
+                </motion.button>
+            </motion.div>
+        </div>
     </motion.header>)
 }
 const Quote = () => {
@@ -122,7 +124,7 @@ const LandingPageCarousel = () => {
                                         variants={containerVariants}
                                     >
                                         <motion.div
-                                            className="relative rounded-2xl overflow-hidden mb-12 "
+                                            className="relative rounded-2xl overflow-hidden my-12 "
                                             variants={fadeUpVariants}
                                             whileInView="visible"
                                             viewport={{ once: true }}
@@ -130,7 +132,7 @@ const LandingPageCarousel = () => {
                                             <motion.img
                                                 src={first_slide}
                                                 alt="Modern school building"
-                                                className="w-full sm:h-[55vh] object-cover rounded-2xl"
+                                                className="w-full h-[45vh] object-cover rounded-2xl"
                                                 variants={fadeUpVariants}
                                                 initial={{ scale: 1.1 }}
                                                 animate={{ scale: 1 }}
@@ -239,7 +241,7 @@ const LandingPageCarousel = () => {
                                         animate={{ scale: 1 }}
                                         transition={{ duration: 1.2 }}
                                     /> */}
-                                            <div className='sm:h-[55vh]'></div>
+                                            <div className='h-[55vh] '></div>
 
                                         </motion.div>
 
