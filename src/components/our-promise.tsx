@@ -1,6 +1,7 @@
 // Import necessary libraries
 import React from 'react';
 import { motion } from 'motion/react';
+import our_promise from "../assets/our-promise/our-promise.png"
 
 // Define the component
 const OurPromise: React.FC = () => {
@@ -52,7 +53,7 @@ const OurPromise: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
-                    src="https://images.unsplash.com/photo-1560796819-89ab1929cdd2?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={our_promise}
                     alt="Student"
                     className=" w-3/4 aspect-square object-cover rounded-lg shadow-md"
                 />

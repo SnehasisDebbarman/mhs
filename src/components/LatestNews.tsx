@@ -1,4 +1,5 @@
 import React from 'react';
+import letest_img from "../assets/latest-news/latest-news.png"
 
 const LatestNews: React.FC = () => {
     return (
@@ -16,23 +17,23 @@ const LatestNews: React.FC = () => {
                         Read More
                     </button>
                 </div>
-                <div className=" relative md:w-1/2">
-                    <div className="absolute inset-0 bg-purple-300 z-0 w-full"></div>
-                    <div className="w-full  relative mt-0 ml-0 hover:-ml-5 hover:-mt-5 transition-all ">
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/80 opacity-100 z-10"></div>
-                        <img
-                            src="https://plus.unsplash.com/premium_photo-1664301311322-e778de6426f8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with the actual image path
-                            alt="Children learning"
-                            className="w-full h-auto aspect-square object-cover"
-                        />
-                        <div className="absolute bottom-0 left-0  p-4 m-4 border-t border-white z-20">
-                            <h2 className=" font-semibold  mb-2">
+                <div className="relative md:w-1/2 h-screen">
+                    <div className="absolute aspect-square inset-0 bg-purple-300 w-full   top-10"></div> */
+                    <div className="w-full relative mb-0  mt-4 hover:-ml-5 hover:mt-0 transition-all">
+                        <div className="absolute  inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/80 opacity-100 z-0"></div>
+                        <div className="absolute bottom-0 left-0  p-4 m-4 border-t border-white z-10">
+                            <h2 className=" font-semibold  mb-2  hover:scale-105 transition-all">
                                 Developing a lifelong love of Learning
                             </h2>
                             <p className="text-white text-sm">
                                 We are a forward-thinking school, dedicated to academic excellence and driven by a passion for progress.
                             </p>
                         </div>
+                        <img
+                            src={letest_img}
+                            alt="Children learning"
+                            className="w-full h-auto aspect-square object-cover z-20"
+                        />
 
                     </div>
                 </div>

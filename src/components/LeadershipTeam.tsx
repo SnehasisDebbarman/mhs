@@ -1,4 +1,5 @@
 import React from 'react';
+import leadership_img from "../assets/leadership/leadership.png"
 
 const LeadershipTeam: React.FC = () => {
     return (
@@ -14,7 +15,7 @@ const LeadershipTeam: React.FC = () => {
             </div>
             <div className="w-full  p-6">
                 <img
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with the actual image path
+                    src={leadership_img}
                     alt="Leadership Team"
                     className="w-full h-auto "
                 />

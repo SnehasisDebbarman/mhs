@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
+import about_us from "../assets/about-us/about-us.png";
 
 const blocks = [
     {
@@ -20,16 +21,22 @@ function AboutUs() {
     return (
         <div className="flex min-h-[200vh] flex-col sm:flex-row mx-auto max-w-7xl bg-white">
             {/* Left Fixed Image Section */}
-            <div className="visible w-full sm:w-1/2 relative p-4 sm:p-20 rounded">
-                <motion.img
-                    src="https://plus.unsplash.com/premium_photo-1663126319781-f4de55c7ebd4?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                transition={{ duration: 1.5 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                layout
+                className="visible w-full sm:w-1/2 relative p-4 sm:p-20 rounded">
+                <img
+                    src={about_us}
                     alt="Placeholder"
                     className="sticky top-10 w-full h-[80vh] object-cover rounded-sm"
                 />
-            </div>
+            </motion.div>
 
             {/* Right Text Section */}
-            <div className="w-full sm:w-1/2 relative p-10 mb-20">
+            <div className="w-full sm:w-1/2 relative  mb-20">
                 {blocks.map((it, index) => (
                     <RevealBlock key={index} title={it.title} description={it.description} index={index} />
                 ))}
@@ -68,7 +75,7 @@ function RevealBlock({ title, description, index }: RevealBlockProps) {
                 {
                     index === 0 && <div className="text-[#B508B5] spectral-light ">About Us</div>
                 }
-                <h3 className="text-2xl sm:text-5xl text-semibold spectral-light">{title}</h3>
+                <h3 className="text-2xl sm:text-4xl text-semibold spectral-light sm:w-2/3">{title}</h3>
                 <div className="text-[12px] sm:text-[18px] text-gray-700 sm:pr-20 ">{description}</div>
             </div>
         </motion.div>

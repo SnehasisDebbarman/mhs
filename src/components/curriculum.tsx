@@ -1,6 +1,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import curriculum_bg from "../assets/curriculum_bg.jpeg";
+// import curriculum_bg from "../assets/curriculum_bg.jpeg";
 import bodily from "../assets/curriculum_logo/bodily.png";
 import interpersonal from "../assets/curriculum_logo/interpersonal.png";
 import language from "../assets/curriculum_logo/Language.png";
@@ -10,6 +10,7 @@ import nature from "../assets/curriculum_logo/nature.png";
 import visual from "../assets/curriculum_logo/visual.png";
 import life from "../assets/curriculum_logo/life.png";
 import useMobileView from "../hooks/useMobileView";
+import curriculum_bg from "../assets/curriculum/curriculum.png";
 
 const Curriculum = () => {
     return (

@@ -1,6 +1,8 @@
 import React from 'react';
 
 import useMobileView from '../hooks/useMobileView';
+import shipra from "../assets/testimonial/shipra.png"
+import meena from "../assets/testimonial/meena.png"
 
 
 interface Testimonial {
@@ -16,21 +18,21 @@ const testimonials: Testimonial[] = [
         role: 'Parent of Class 1 Student',
         testimonial:
             'MHS Junior School has completely transformed the way my child learns. The focus on holistic development and personalized teaching has brought out the best in them. I couldn’t be happier with their progress!',
-        imageSrc: 'path_to_image1.jpg', // Replace with actual image path
+        imageSrc: shipra, // Replace with actual image path
     },
     {
         name: 'Meena Sharma',
         role: 'Parent of Class 2 Student',
         testimonial:
             'MHS Junior School has completely transformed the way my child learns. The focus on holistic development and personalized teaching has brought out the best in them. I couldn’t be happier with their progress!',
-        imageSrc: 'path_to_image2.jpg', // Replace with actual image path
+        imageSrc: meena, // Replace with actual image path
     },
     {
         name: 'Sunita Gupta',
         role: 'Parent of Class 4 Student',
         testimonial:
             'MHS Junior School has completely transformed the way my child learns. The focus on holistic development and personalized teaching has brought out the best in them. I couldn’t be happier with their progress!',
-        imageSrc: 'path_to_image3.jpg', // Replace with actual image path
+        imageSrc: shipra, // Replace with actual image path
     },
 ];
 
@@ -52,7 +54,7 @@ const ParentTestimonials: React.FC = () => {
                                     <img
                                         src={testimonial.imageSrc}
                                         alt={testimonial.name}
-                                        className="w-16 h-16 rounded-full mb-4"
+                                        className="w-12 h-12 rounded-full mb-4"
                                     />
                                     <div>
                                         <h2 className=" font-semibold mb-1 text-black">{testimonial.name}</h2>

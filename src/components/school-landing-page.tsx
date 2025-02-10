@@ -1,5 +1,8 @@
 import { motion } from 'motion/react';
 import mhs_logo from "../assets/mhs_logo.png"
+import first_slide from "../assets/landing-page/first-slide.png"
+import invert_comma from "../assets/invert-comma.png"
+
 const fadeUpVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -33,7 +36,7 @@ const SchoolLandingPage = () => {
         >
             {/* Header */}
             <motion.header
-                className="bg-[#7B057B] px-5 md:px-20 py-4 flex justify-between items-center"
+                className=" px-5 md:px-20 py-4 flex justify-between items-center"
                 variants={containerVariants}
             >
                 <motion.div
@@ -72,19 +75,19 @@ const SchoolLandingPage = () => {
                 >
                     {/* Image Container */}
                     <motion.div
-                        className="mx-auto max-w-6xl px-6 py-8"
+                        className="mx-auto max-w-6xl px-6 py-8 min-h-screen"
                         variants={containerVariants}
                     >
                         <motion.div
-                            className="relative rounded-2xl overflow-hidden mb-12"
+                            className="relative rounded-2xl overflow-hidden mb-12 "
                             variants={fadeUpVariants}
                             whileInView="visible"
                             viewport={{ once: true }}
                         >
                             <motion.img
-                                src="https://images.unsplash.com/photo-1613896527026-f195d5c818ed?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src={first_slide}
                                 alt="Modern school building"
-                                className="w-full h-[400px] object-cover rounded-2xl"
+                                className="w-full sm:h-[450px] object-cover rounded-2xl"
                                 variants={fadeUpVariants}
                                 initial={{ scale: 1.1 }}
                                 animate={{ scale: 1 }}
@@ -108,13 +111,13 @@ const SchoolLandingPage = () => {
 
                         {/* Text Content */}
                         <motion.div
-                            className="space-y-6"
+                            className="space-y-10 sm:space-y-6"
                             variants={containerVariants}
                             whileInView="visible"
                             viewport={{ once: true }}
                         >
                             <motion.h1
-                                className="text-5xl font-serif  border-l-2 border-[#F00AF0] pl-4"
+                                className="text-7xl sm:text-6xl font-serif  border-l-2 border-[#F00AF0] pl-4"
                                 variants={fadeUpVariants}
                             >
                                 <motion.span
@@ -155,16 +158,14 @@ const SchoolLandingPage = () => {
                         <motion.div
                             className="flex justify-center mb-6"
                             variants={fadeUpVariants}
-                            whileHover={{ scale: 1.1, rotate: 360 }}
+                            // whileHover={{ scale: 1.1, rotate: 360 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <svg
-                                className="w-12 h-12"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
+                            <img
+                                className="size-20"
+                                src={invert_comma}
                             >
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                            </svg>
+                            </img>
                         </motion.div>
                         <motion.p
                             className="text-4xl font-light leading-relaxed spectral-regular "
