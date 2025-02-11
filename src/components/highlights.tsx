@@ -112,26 +112,37 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card }: { card: CardType }) => {
+    const isMobile = useMobileView();
     return (
         <div
             key={card.id}
             className={`rounded-lg`}
-            style={{
+            style={isMobile ? {
+                width: "100%"
+
+            } : {
                 width: card.width,
                 height: card.height,
             }}
         >
-            <div className="bg-neutral-200 p-5 rounded-lg w-full ">
+            <div style={
+                isMobile ? {
+                    width: `${(card.width / 100) * 10}vh`,
+                } : {
+                    width: "100%"
+                }
+
+            } className={`bg-neutral-200 p-5 rounded-lg w-[80vw] sm:w-full `}>
                 <img
                     src={card.url}
                     alt={card.title}
-                    className="w-1/3  object-contain mb-2"
+                    className="w-1/4 sm:w-1/3  object-contain mb-2"
                 />
                 <div className="grid place-content-center ">
                     <p className="text-[13px] text-gray-700 font-semibold">{card.description}</p>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

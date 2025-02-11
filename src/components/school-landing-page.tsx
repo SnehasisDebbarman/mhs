@@ -3,7 +3,8 @@ import mhs_logo from "../assets/mhs_logo.png"
 import first_slide from "../assets/landing-page/first-slide.png"
 import second_slide from "../assets/landing-page/second-slide.png"
 import invert_comma from "../assets/invert-comma.png"
-import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselDots } from './ui/carousel';
+// import Autoplay from "embla-carousel-autoplay"
 
 const fadeUpVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -102,7 +103,12 @@ const LandingPageCarousel = () => {
     return (
         <div className='relative  bg-[#7B057B]'>
             <Header />
-            <Carousel >
+            <Carousel plugins={[
+                // Autoplay({
+                //     delay: 2000,
+                // }),
+            ]}
+            >
                 <CarouselContent className=''>
 
                     <CarouselItem className="bg-[#7B057B] pt-16">
@@ -287,6 +293,7 @@ const LandingPageCarousel = () => {
 
 
                 </CarouselContent>
+                <CarouselDots />
                 {/* <CarouselPrevious className='absolute bg-[#B508B5]' /> */}
                 {/* <CarouselNext className='absolute  bg-[#B508B5]' /> */}
             </Carousel >
