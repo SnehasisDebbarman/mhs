@@ -41,7 +41,7 @@ function AboutUs() {
                 >
                     <div className="text-[#B508B5] spectral-light ">About Us</div>
 
-                    <h3 className="text-2xl sm:text-4xl text-semibold spectral-light sm:w-2/3">{"Welcome to Matrix High School Igniting Possibilities"}</h3>
+                    <h3 className="text-black text-2xl sm:text-4xl text-semibold spectral-light sm:w-2/3">{"Welcome to Matrix High School Igniting Possibilities"}</h3>
 
                 </motion.div>
                 {blocks.map((it, index) => (
