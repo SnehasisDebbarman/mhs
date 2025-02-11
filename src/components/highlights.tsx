@@ -32,7 +32,7 @@ const cards: CardType[] = [
         description: <p>An Outstanding School in the heart of Sikar, offering an exceptional <strong>education for boys and girls aged 2 to 18</strong> </p>,
         id: 2,
         width: 280,
-        height: 360,
+        height: 350,
     },
     {
         url: start,
@@ -95,12 +95,12 @@ const HorizontalScrollCarousel = () => {
             <div className="sticky top-0 flex flex-col h-screen  overflow-hidden bg-center bg-cover" style={{
                 backgroundImage: `url(${highlight_bg})`
             }}>
-                <div className="max-w-6xl px-5 sm:px-72  ">
-                    <h3 className="text-xl sm:text-5xl spectral-regular pt-10 pb-6">Unlocking Your Child’s Full Potential at MHS Junior School with MIT</h3>
-                    <p className="text-[14px] sm:text-sm">We pioneer the MIT Model in Sikar, blending innovation with tradition to foster a dynamic learning environment that nurtures each child's unique potential through exceptional teaching. At MHS, students discover their passions and what inspires them, laying the foundation for success in school, work, and life. Our curriculum integrates diverse intelligences—linguistic, musical, spatial, bodily-kinesthetic, interpersonal, intrapersonal, naturalistic, and existential—to create a holistic and engaging learning experience.</p>
-                    <div className="my-8 rounded-full text-[#7B057B] bg-white p-2 px-5 float-left max-w-max">key highlights</div>
+                <div className="max-w-6xl px-5 sm:px-52  ">
+                    <h3 className="text-xl sm:text-5xl spectral-regular pt-5 pb-6 text-white">Unlocking Your Child’s Full Potential at MHS Junior School with MIT</h3>
+                    <p className="text-[14px] sm:text-sm text-white">We pioneer the MIT Model in Sikar, blending innovation with tradition to foster a dynamic learning environment that nurtures each child's unique potential through exceptional teaching. At MHS, students discover their passions and what inspires them, laying the foundation for success in school, work, and life. Our curriculum integrates diverse intelligences—linguistic, musical, spatial, bodily-kinesthetic, interpersonal, intrapersonal, naturalistic, and existential—to create a holistic and engaging learning experience.</p>
+                    <div className="my-8 rounded-full text-[#7B057B] bg-white p-3 px-6 float-left max-w-max font-semibold text-sm">key highlights</div>
                 </div>
-                <motion.div style={{ x: isMobile ? mobileX : x }} className="flex  gap-2 ">
+                <motion.div style={{ x: isMobile ? mobileX : x }} className="flex w-auto gap-4">
                     {cards.map((card) => {
                         return <Card card={card} key={card.id} />;
                     })}
@@ -115,16 +115,25 @@ const Card = ({ card }: { card: CardType }) => {
     return (
         <div
             key={card.id}
-            className={`min-w-[200px] bg-neutral-200 p-5 rounded-lg`}
+            className={`rounded-lg`}
+            style={{
+                width: card.width,
+                height: card.height,
+            }}
         >
-            <img src={card.url} alt={card.title} className=" inset-0 z-0 mb-2 h-10 " />
-            <div className=" inset-0 z-10 grid place-content-center">
-                <p className="text-[10px]   text-black ">
-                    {card.description}
-                </p>
+            <div className="bg-neutral-200 p-5 rounded-lg w-full ">
+                <img
+                    src={card.url}
+                    alt={card.title}
+                    className="w-1/3  object-contain mb-2"
+                />
+                <div className="grid place-content-center ">
+                    <p className="text-[13px] text-gray-700 font-semibold">{card.description}</p>
+                </div>
             </div>
         </div>
     );
 };
+
 
 export default Highlights;

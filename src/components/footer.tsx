@@ -13,9 +13,9 @@ const Footer: React.FC = () => {
                         <a href="#" className="flex items-center">
                             <img src={mhs_logo} className="h-8 me-3" alt="FlowBite Logo" />
                         </a>
-                        <h3 className='text-3xl my-5 sm:w-2/3'>The First <strong>MIT Model Junior School</strong>  in Sikar</h3>
+                        <h3 className='text-3xl my-5 sm:w-2/3 text-white'>The First <strong>MIT Model Junior School</strong>  in Sikar</h3>
                         <img src={cbse_logo} className="w-10 me-3" alt="FlowBite Logo" />
-                        <p className='text-center w-12 text-[8px]'>Affiliated to <br /> <strong className='text-center'>CBSE</strong></p>
+                        <p className='text-center w-12 text-[8px] text-white'>Affiliated to <br /> <strong className='text-center'>CBSE</strong></p>
 
                     </div>
                     <div className="sm:w-1/2  grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2">
@@ -65,10 +65,10 @@ const Footer: React.FC = () => {
                                     </div>
                                 </li>
                                 <li>
-                                    <button className='bg-[#B508B5] text-white rounded-full px-6 py-2 text-sm flex gap-3 items-center'>
+                                    <div className='bg-[#B508B5] text-white rounded-full px-6 py-2 text-sm flex gap-3 items-center'>
                                         <img className='h-8' src={prospectus} alt="prospectus" />
                                         <p>Download Prospectus</p>
-                                    </button>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -92,10 +92,10 @@ const Footer: React.FC = () => {
                                 </li>
 
                                 <li>
-                                    <button className='bg-[#B508B5] text-white rounded-full px-6 py-2 text-sm flex gap-3 items-center'>
+                                    <div className='bg-[#B508B5] text-white rounded-full px-6 py-2 text-sm flex gap-3 items-center'>
                                         <img className="h-8" src={send} alt="send" />
                                         <p> Get Directions</p>
-                                    </button>
+                                    </div>
                                 </li>
 
 

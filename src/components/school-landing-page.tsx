@@ -132,7 +132,7 @@ const LandingPageCarousel = () => {
                                             <motion.img
                                                 src={first_slide}
                                                 alt="Modern school building"
-                                                className="w-full h-[45vh] object-cover rounded-2xl"
+                                                className="w-full aspect-video object-cover rounded-2xl"
                                                 variants={fadeUpVariants}
                                                 initial={{ scale: 1.1 }}
                                                 animate={{ scale: 1 }}
@@ -167,13 +167,13 @@ const LandingPageCarousel = () => {
                                             >
                                                 <motion.span
                                                     variants={fadeUpVariants}
-                                                    className="block spectral-regular "
+                                                    className="block spectral-regular text-6xl "
                                                 >
                                                     The First
                                                 </motion.span>
                                                 <motion.span
                                                     variants={fadeUpVariants}
-                                                    className="spectral-regular"
+                                                    className="spectral-regular text-6xl"
                                                 >
                                                     MIT Model School in {" "}
                                                     <motion.span

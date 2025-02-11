@@ -1,10 +1,10 @@
 import React from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import about_us from "../assets/about-us/about-us.png";
 
 const blocks = [
     {
-        title: "Welcome to Matrix High School Igniting Possibilities",
+        title: "",
         description: "We create an extraordinary space where the love for learning is kindled, curiosity flourishes, and creativity knows no bounds. From the moment you step through our doors, you’ll feel the vibrant energy and enthusiasm that define life at MHS. Our hallways resonate with laughter and lively discussions, fostering a supportive environment where students become courageous, resilient learners, unafraid to take risks and aim high. "
     },
     {
@@ -37,6 +37,13 @@ function AboutUs() {
 
             {/* Right Text Section */}
             <div className="w-full sm:w-1/2 relative  mb-20">
+                <motion.div className="sticky top-0 pt-10 ml-5 bg-white z-40"
+                >
+                    <div className="text-[#B508B5] spectral-light ">About Us</div>
+
+                    <h3 className="text-2xl sm:text-4xl text-semibold spectral-light sm:w-2/3">{"Welcome to Matrix High School Igniting Possibilities"}</h3>
+
+                </motion.div>
                 {blocks.map((it, index) => (
                     <RevealBlock key={index} title={it.title} description={it.description} index={index} />
                 ))}
@@ -51,34 +58,40 @@ interface RevealBlockProps {
     description: string;
     index: number;
 }
-function RevealBlock({ title, description, index }: RevealBlockProps) {
+function RevealBlock({ description }: RevealBlockProps) {
 
     const ref = React.useRef(null);
-    const isInView = useInView(ref, { amount: 0.7 });
+    const isInView = useInView(ref, { amount: 0.5 });
 
 
     return (
-        <motion.div
-            ref={ref}
-            className={`left-0 w-full h-[50vh] sm:h-[80vh] text-gray-900 snap-center snap-normal snap-y  p-8 rounded-md  flex items-center justify-center text-2xl  mb-4`}
-            initial={{ opacity: 0 }}
-            animate={{
-                opacity: isInView ? 1 : 0,
-                transition: {
-                    duration: 0.5,
-                    delay: isInView ? 0 : 0
-                }
-            }}
-            exit={{ opacity: 0 }}
-        >
-            <div className="flex flex-col gap-3 ">
-                {
-                    index === 0 && <div className="text-[#B508B5] spectral-light ">About Us</div>
-                }
-                <h3 className="text-2xl sm:text-4xl text-semibold spectral-light sm:w-2/3">{title}</h3>
-                <div className="text-[12px] sm:text-[18px] text-gray-700 sm:pr-20 ">{description}</div>
-            </div>
-        </motion.div>
+        <div>
+
+
+            <motion.div
+                ref={ref}
+                className={`left-0 w-full h-[50vh] sm:h-[80vh] text-gray-900 snap-center snap-normal snap-y  p-8 rounded-md  flex items-center justify-center text-2xl  mb-4`}
+                initial={{ opacity: 0 }}
+                animate={{
+                    opacity: isInView ? 1 : 0,
+                    y: isInView ? 100 : 0,
+                    transition: {
+                        duration: 0.5,
+                        delay: isInView ? 0 : 0
+                    }
+                }}
+                exit={{ opacity: 0 }}
+            >
+                <div className="flex flex-col gap-3 ">
+                    {/* {
+                        index === 0 && <div className="text-[#B508B5] spectral-light ">About Us</div>
+                    }
+                    <h3 className="text-2xl sm:text-4xl text-semibold spectral-light sm:w-2/3">{title}</h3> */}
+                    <div className="text-[12px] sm:text-2xl text-gray-700 sm:pr-20 ">{description}</div>
+                </div>
+            </motion.div >
+        </div>
+
     );
 }
 
