@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import our_promise from "../assets/our-promise/our-promise.png";
 
 // Define the component
@@ -12,13 +12,13 @@ const OurPromise: React.FC = () => {
         if (ref.current) {
             const observer = new IntersectionObserver(
                 (entries) => {
-                    entries.forEach((entry) => {
+                    for (const entry of entries) {
                         if (entry.isIntersecting) {
                             setIsInView(true);
                         } else {
                             setIsInView(false);
                         }
-                    });
+                    }
                 },
                 {
                     root: null, // Use the viewport as the root

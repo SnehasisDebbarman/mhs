@@ -90,7 +90,7 @@ function AboutUs() {
                         //     background: !isNearEnd ? "white" : "#B508B5",
                         //     transition: 'all 0.7s ease-in-out'
                         // }}
-                        className={`sticky top-0 pt-10 pl-5  z-40`}
+                        className={'sticky top-0 pt-10 pl-5  z-40'}
                     >
                         <div className={`spectral-light  transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-[#B508B5]'
                             }`}>
