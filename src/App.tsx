@@ -12,10 +12,17 @@ import OurPromise from './components/our-promise'
 import SchoolLandingPage from './components/school-landing-page'
 import ParentTestimonials from './components/testimonials'
 
+// import sample from "./assets/pdf/sample.pdf"
+
 function App() {
 
   return (
-    <div className='flex flex-col gap-6'>
+    <div className='flex flex-col'>
+      {/* <div className="modal">
+        <div className="modalContent">
+          <iframe src={sample} style={{ height: 500, width: 500 }} frameBorder="0"></iframe>
+        </div>
+      </div> */}
       <SchoolLandingPage />
       <AboutUs />
       <Highlights />

@@ -1,5 +1,5 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { motion, useTransform, useScroll, useAnimate, useInView } from "motion/react";
+import { useEffect, useRef } from "react";
 // import curriculum_bg from "../assets/curriculum_bg.jpeg";
 import bodily from "../assets/curriculum_logo/bodily.png";
 import interpersonal from "../assets/curriculum_logo/interpersonal.png";
@@ -13,8 +13,20 @@ import useMobileView from "../hooks/useMobileView";
 import curriculum_bg from "../assets/curriculum/curriculum.png";
 
 const Curriculum = () => {
+    const [scope, animate] = useAnimate();
+    const isInView = useInView(scope);
+    useEffect(() => {
+        async function anim() {
+            if (isInView) {
+                await animate(scope.current, { opacity: 1 }, { delay: 1, duration: 1.5 })
+            }
+        }
+        anim()
+
+    }, [isInView])
+
     return (
-        <div className="">
+        <div ref={scope} className="opacity-0">
 
             <HorizontalScrollCarousel />
 
@@ -57,7 +69,7 @@ const HorizontalScrollCarousel = () => {
         <section ref={targetRef} className="relative h-[350vh] mx-auto pt-10  sm:pt-46 text-black ">
             <div className="sticky top-0 flex flex-col h-screen  overflow-hidden bg-cover bg-center px-8  " style={{ backgroundImage: `url(${curriculum_bg})` }}>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/90 to-black/90 opacity-100 z-10"></div>
-                <div className="max-w-6xl mx-auto h-screen flex  flex-col z-20 pb-20 sm:pb-32">
+                <div className="max-w-6xl mx-auto h-screen flex  flex-col z-20 pb-20 sm:pb-32 overflow-hidden">
                     <div className="flex flex-col sm:flex-row justify-between pt-10 sm:pt-40">
                         <div>
                             <p className="text-[#F97BF9] sm:mb-3  spectral-regular text-lg sm:text-2xl">Curriculum</p>

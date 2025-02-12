@@ -4,7 +4,7 @@ import first_slide from "../assets/landing-page/first-slide.png"
 import second_slide from "../assets/landing-page/second-slide.png"
 import invert_comma from "../assets/invert-comma.png"
 import { Carousel, CarouselContent, CarouselItem, CarouselDots } from './ui/carousel';
-// import Autoplay from "embla-carousel-autoplay"
+
 
 const fadeUpVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -63,14 +63,17 @@ const Header = () => {
     </motion.header>)
 }
 const Quote = () => {
+
+
     return (<motion.div
-        className="bg-[#030817] text-white py-24"
+        // ref={scope}
+        className="bg-[#030817] opacity-0 text-white h-screen flex justify-center text-center"
         variants={fadeUpVariants}
         whileInView="visible"
-        viewport={{ once: true }}
+    // viewport={{ once: true }}
     >
         <motion.div
-            className="max-w-4xl mx-auto px-6 text-center"
+            className="max-w-4xl mx-auto px-6 text-center flex justify-center items-center flex-col"
             variants={containerVariants}
         >
             <motion.div
