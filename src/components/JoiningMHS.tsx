@@ -13,10 +13,10 @@ const JoiningMHS: React.FC = () => {
                     Regardless of your child’s age, our dedicated Admissions team is here to guide you through the process and address any questions you may have, ensuring a smooth transition into the MHS community.
                 </p>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                    <div className="bg-white text-[#7B057B] px-6 py-2 rounded-full font-semibold text-sm text-center">
+                    <div className=" cursor-pointer hover:scale-105 transition-all duration-500 bg-white text-[#7B057B] px-6 py-2 rounded-full font-semibold text-sm text-center">
                         Book a Visit
                     </div>
-                    <div className="border border-white text-#7B057B px-6 py-2 rounded-full font-semibold text-sm text-center">
+                    <div className="cursor-pointer hover:scale-105 transition-all duration-500 border border-white text-#7B057B px-6 py-2 rounded-full font-semibold text-sm text-center">
                         Apply Now
                     </div>
                 </div>

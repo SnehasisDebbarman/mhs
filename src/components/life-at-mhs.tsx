@@ -48,13 +48,14 @@ const HorizontalScrollCarousel = () => {
     );
 };
 
+
 const Card = ({ card }: { card: CardType }) => {
     return (
         <div className="relative">
-            <div className="group absolute -top-2 -left-2 h-[70vh] min-w-[300px] sm:min-w-[70vw] overflow-hidden bg-purple-400 z-10"></div>
+            <div className="group absolute -top-2 -left-2 h-[70vh] min-w-[300px] sm:min-w-[60vw] overflow-hidden bg-purple-400 z-10"></div>
             <div
                 key={card.id}
-                className="group relative h-[70vh] min-w-[300px] sm:min-w-[70vw] overflow-hidden bg-neutral-200 z-20"
+                className="group relative h-[70vh] min-w-[300px] sm:min-w-[60vw] overflow-hidden bg-neutral-200 z-20"
             >
 
                 <div

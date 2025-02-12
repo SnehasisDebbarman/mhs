@@ -84,7 +84,7 @@ const OurPromise: React.FC = () => {
                     animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                     exit={{ opacity: 0, y: 20 }} // Reverse of enter
                     transition={{ duration: 0.7, delay: 1.0 }}
-                    className="max-w-max bg-[#B508B5] hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full"
+                    className=" cursor-pointer max-w-max bg-[#B508B5] hover:scale-105 transition-all duration-500 text-white font-semibold py-3 px-6 rounded-full"
                 >
                     Book a Visit
                 </motion.div>

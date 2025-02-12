@@ -18,11 +18,7 @@ function App() {
 
   return (
     <div className='flex flex-col'>
-      {/* <div className="modal">
-        <div className="modalContent">
-          <iframe src={sample} style={{ height: 500, width: 500 }} frameBorder="0"></iframe>
-        </div>
-      </div> */}
+
       <SchoolLandingPage />
       <AboutUs />
       <Highlights />

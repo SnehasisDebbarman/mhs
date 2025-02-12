@@ -11,6 +11,7 @@ import {
     CarouselDots
 } from "../components/ui/carousel"
 import { cn } from '../lib/utils';
+import StarRating from './ui/star-rating';
 
 
 
@@ -19,6 +20,7 @@ interface Testimonial {
     role: string;
     testimonial: string;
     imageSrc: string;
+    rating: number;
 }
 
 const testimonials: Testimonial[] = [
@@ -28,6 +30,7 @@ const testimonials: Testimonial[] = [
         testimonial:
             'MHS Junior School has completely transformed the way my child learns. The focus on holistic development and personalized teaching has brought out the best in them. I couldn’t be happier with their progress!',
         imageSrc: shipra, // Replace with actual image path
+        rating: 4,
     },
     {
         name: 'Meena Sharma',
@@ -35,6 +38,7 @@ const testimonials: Testimonial[] = [
         testimonial:
             'MHS Junior School has completely transformed the way my child learns. The focus on holistic development and personalized teaching has brought out the best in them. I couldn’t be happier with their progress!',
         imageSrc: meena, // Replace with actual image path
+        rating: 5,
     },
     {
         name: 'Sunita Gupta',
@@ -42,6 +46,7 @@ const testimonials: Testimonial[] = [
         testimonial:
             'MHS Junior School has completely transformed the way my child learns. The focus on holistic development and personalized teaching has brought out the best in them. I couldn’t be happier with their progress!',
         imageSrc: shipra, // Replace with actual image path
+        rating: 4,
     },
 ];
 
@@ -91,9 +96,10 @@ const ParentTestimonials: React.FC = () => {
                                         alt={testimonial.name}
                                         className="w-12 h-12 rounded-full mb-4"
                                     />
-                                    <div>
-                                        <h2 className=" font-semibold mb-1 text-black">{testimonial.name}</h2>
-                                        <p className="text-gray-600 mb-2 text-sm">{testimonial.role}</p>
+                                    <div className='flex flex-col gap-0'>
+                                        <h2 className=" font-semibold  text-black">{testimonial.name}</h2>
+                                        <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                                        <StarRating rating={testimonial.rating} />
                                     </div>
                                 </div>
 
