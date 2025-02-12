@@ -121,7 +121,7 @@ const HorizontalScrollCarousel = () => {
                     <p className="text-[12px] sm:text-sm text-white">We pioneer the MIT Model in Sikar, blending innovation with tradition to foster a dynamic learning environment that nurtures each child's unique potential through exceptional teaching. At MHS, students discover their passions and what inspires them, laying the foundation for success in school, work, and life. Our curriculum integrates diverse intelligences—linguistic, musical, spatial, bodily-kinesthetic, interpersonal, intrapersonal, naturalistic, and existential—to create a holistic and engaging learning experience.</p>
                     <div className=" cursor-pointer my-8 rounded-full text-[#7B057B] bg-white p-3 px-6 float-left max-w-max font-semibold text-sm hover:scale-105 transition-all duration-500">key highlights</div>
                 </div>
-                <motion.div style={{ x: isMobile ? mobileX : x }} className="flex gap-4 w-[200vw]">
+                <motion.div style={{ x: isMobile ? mobileX : x }} className="flex gap-4 w-[150vw]">
                     {cards.map((card) => {
                         return <Card card={card} key={card.id} />;
                     })}

@@ -30,15 +30,15 @@ const containerVariants = {
 };
 const Header = () => {
     return (<motion.header
-        className="absolute z-20  w-[100vw] flex justify-between sm:px-20 "
+        className="absolute z-20  w-[100vw] flex justify-between items-center mx-auto "
         variants={containerVariants}
     >
-        <div className='max-w-6xl w-full px-5  py-4 flex justify-between items-center '>
+        <div className='max-w-6xl w-full px-5  py-4 flex justify-between items-center mx-auto '>
             <motion.div
                 className="flex items-center"
                 variants={fadeUpVariants}
             >
-                <img src={mhs_logo} alt="School Logo" className="w-28" />
+                <img src={mhs_logo} alt="School Logo" className="w-44" />
             </motion.div>
             <motion.div
                 className="flex flex-col  md:flex-row items-center gap-4"
@@ -114,7 +114,7 @@ const LandingPageCarousel = () => {
             >
                 <CarouselContent className=''>
 
-                    <CarouselItem className="bg-[#7B057B] pt-16">
+                    <CarouselItem className="bg-[#7B057B] py-16">
 
                         <motion.div
                             className=" bg-[#7B057B]"
@@ -236,21 +236,20 @@ const LandingPageCarousel = () => {
                                         variants={containerVariants}
                                     >
                                         <motion.div
-                                            className="relative rounded-2xl overflow-hidden mb-12 opacity-0 "
+                                            className="relative rounded-2xl overflow-hidden my-12 opacity-0 "
                                             variants={fadeUpVariants}
                                             whileInView="visible"
                                             viewport={{ once: true }}
                                         >
-                                            {/* <motion.img
-                                        src={first_slide}
-                                        alt="Modern school building "
-                                        className="w-full sm:h-[450px] object-cover rounded-2xl "
-                                        variants={fadeUpVariants}
-                                        initial={{ scale: 1.1 }}
-                                        animate={{ scale: 1 }}
-                                        transition={{ duration: 1.2 }}
-                                    /> */}
-                                            <div className='h-[55vh] '></div>
+                                            <motion.div
+                                                // src={first_slide}
+                                                // alt="Modern school building"
+                                                className="w-full aspect-video object-cover rounded-2xl"
+                                                variants={fadeUpVariants}
+                                                initial={{ scale: 1.1 }}
+                                                animate={{ scale: 1 }}
+                                                transition={{ duration: 1.2 }}
+                                            />
 
                                         </motion.div>
 
