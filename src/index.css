@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Collingar';
+  src: url('./assets/fonts/collingar-collingar-400.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Collingar';
+  src: url('./assets/fonts/collingar-collingar-italic-400.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -45,6 +59,7 @@ body {
   /* min-height: 100vh; */
 }
 
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -63,19 +78,19 @@ button:focus-visible {
 }
 
 .spectral-light {
-  font-family: "Spectral", serif;
+  font-family: "Collingar", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .spectral-regular {
-  font-family: "Spectral", serif;
+  font-family: "Collingar", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .spectral-medium {
-  font-family: "Spectral", serif;
+  font-family: "Collingar", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
