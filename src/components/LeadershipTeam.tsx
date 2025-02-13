@@ -5,8 +5,8 @@ const LeadershipTeam: React.FC = () => {
     return (
         <div className="flex flex-col md:flex-col items-center justify-center p-4 max-w-6xl mx-auto mt-20">
             <div className="w-full  p-6 flex flex-col sm:flex-row">
-                <div> <p className='text-[#7B057B] spectral-medium'>Our Team</p>
-                    <h1 className="sm:w-1/2 text-sm sm:text-4xl font-bold text-black mb-4 spectral-medium">
+                <div> <p className='spectral-medium text-[#B508B5] mb-4'>Our Team</p>
+                    <h1 className="sm:w-1/2 text-5xl font-bold text-gray-950 mb-4 spectral-medium ">
                         The Visionary Leadership Behind MHS
                     </h1></div>
                 <p className="sm:w-1/2 text-lg text-gray-700 mb-6">

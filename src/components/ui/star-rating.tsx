@@ -10,7 +10,7 @@ const StarRating: React.FC<StarRatingProps> = ({
     totalStars = 5,
 }) => {
     return (
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', gap: 2 }}>
             {[...Array(totalStars)].map((_, index) => {
                 const starValue = index + 1;
                 return (
@@ -18,7 +18,7 @@ const StarRating: React.FC<StarRatingProps> = ({
                         key={starValue}
                         style={{
                             fontSize: '10px',
-                            color: starValue <= rating ? 'gold' : 'gray',
+                            color: starValue <= rating ? '#F00AF0' : 'gray',
                         }}
                     >
                         ★

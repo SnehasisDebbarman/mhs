@@ -30,11 +30,11 @@ const HorizontalScrollCarousel = () => {
         <section ref={targetRef} className="relative h-[350vh] mx-auto py-18 text-black ">
             <div className="sticky top-0 flex flex-col h-screen  overflow-hidden bg-cover bg-center px-8  " >
                 {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black opacity-100 z-10"></div> */}
-                <div className="max-w-6xl mx-auto h-screen flex flex-col pt-2 sm:pt-20 z-20">
+                <div className="max-w-5xl mx-auto h-screen flex flex-col pt-2 sm:pt-20 z-20">
                     <p className="text-[#7B057B] pt-4 sm:pt-10 ">Life At MHS</p>
-                    <h3 className="text-4xl sm:text-8xl spectral-regular text-black py-2 sm:py-6  md:w-1/3">What's
+                    <h3 className="text-4xl sm:text-5xl spectral-regular text-black py-2 sm:py-6  md:w-1/3">What's
                         Happening?</h3>
-                    <p className="text-sm sm:text-base sm:w-1/3">Discover what makes MHS unique—an outstanding location in the heart of Sikar and an exciting place where children learn and grow through our personalized approach to teaching and learning.</p>
+                    <p className="text-sm sm:text-base sm:w-3/6">Discover what makes MHS unique—an outstanding location in the heart of Sikar and an exciting place where children learn and grow through our personalized approach to teaching and learning.</p>
 
 
                     <motion.div style={{ x: isMobile ? mobileX : x }} className="absolute flex gap-4 top-50  sm:top-20">

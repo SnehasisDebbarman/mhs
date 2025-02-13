@@ -70,18 +70,18 @@ const HorizontalScrollCarousel = () => {
             <div className="sticky top-0 flex flex-col h-screen  overflow-hidden bg-cover bg-center px-8  " style={{ backgroundImage: `url(${curriculum_bg})` }}>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/90 to-black/90 opacity-100 z-10"></div>
                 <div className="max-w-6xl mx-auto h-screen flex  flex-col z-20 pb-20 sm:pb-32 overflow-hidden">
-                    <div className="flex flex-col sm:flex-row justify-between pt-10 sm:pt-40">
+                    <div className="flex flex-col sm:flex-row justify-between pt-10 sm:pt-28">
                         <div>
-                            <p className="text-[#F97BF9] sm:mb-3  spectral-regular text-lg sm:text-2xl">Curriculum</p>
-                            <div className="w-[240px] text-3xl sm:text-5xl spectral-regular pt-5 pb-6 sm:pb-6 text-white md:w-3/5">A Curriculum Designed for
-                                Every Child’s Success</div>
+                            <p className="text-[#F97BF9] sm:mb-3  spectral-regular text-lg sm:text-xl">Curriculum</p>
+                            <h2 className="w-[240px] leading-tight text-3xl sm:text-5xl spectral-regular pt-5 pb-6 sm:pb-6 text-white md:w-3/5">A Curriculum Designed for
+                                Every Child’s Success</h2>
                         </div>
                         <div className="flex flex-col  sm:flex-row   ">
                             <div className="flex flex-col sm:flex-row gap-4">
 
                                 {
-                                    categories.map((category, i) => <div className={(i === 0 ? "" : "border-l border-purple-300 ") + "px-4 sm:h-[120px] " + (isMobile && "border-l border-purple-300 ")}>
-                                        <h3 className="text-sm sm:text-lg font-semibold sm:pb-4 spectral-regular text-white max-w-min">{category.category}</h3>
+                                    categories.map((category, i) => <div className={(i === 0 ? "" : "border-l border-purple-300 ") + "px-4 sm:h-[160px] " + (isMobile && "border-l border-purple-300 ")}>
+                                        <h3 className="text-sm sm:text-xl font-semibold sm:pb-4 spectral-regular text-white max-w-min">{category.category}</h3>
                                         <p className="text-white text-[10px] sm:text-[12px]">{category.description}</p>
 
                                     </div>)

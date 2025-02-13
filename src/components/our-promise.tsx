@@ -43,20 +43,7 @@ const OurPromise: React.FC = () => {
             className="flex flex-col md:flex-row items-center justify-center p-8 max-w-6xl mx-auto rounded-lg relative"
         >
             <div className="md:w-1/2 p-4 flex flex-col justify-center">
-                {/*
-            <p className="spectral-medium text-[#B508B5] mb-4">
-                            Featured News & Article
-                        </p>
-                        <h2 className="text-5xl font-bold text-gray-950 mb-4 spectral-medium sm:w-3/5">
-                            Latest News from MHS
-                        </h2>
-                        <p className="text-lg text-gray-700 mb-6">
-                            An innovative curriculum that sparks academic curiosity and fuels a
-                            passion for learning. Our classrooms are spaces where challenging
-                            questions are embraced, deepening understanding and critical
-                            thinking. Every student is valued and welcomed for who they are,
-                            creating a supportive environment that nurtures individuality.
-                        </p> */}
+
 
 
                 <motion.p

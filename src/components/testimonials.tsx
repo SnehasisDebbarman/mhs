@@ -53,58 +53,32 @@ const testimonials: Testimonial[] = [
 const ParentTestimonials: React.FC = () => {
     const isMobile = useMobileView()
     return (
-        <div className="container mx-auto p-4 max-w-6xl pb-40 flex flex-col items-center">
-            <h1 className="text-6xl spectral-regular sm:text-3xl font-bold text-center mb-8 text-black">What Parents Says</h1>
-            {/* {
-                !isMobile ?
+        <div className="container mx-auto p-4 max-w-6xl pb-20 sm:pb-0  flex flex-col items-center sm:h-screen">
+            <h1 className="text-6xl spectral-regular sm:text-3xl font-bold text-center mb-20 text-black">What Parents Says</h1>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {testimonials.map((testimonial, index) => (
-                            <div
-                                key={index}
-                                className="bg-[#FEF0FE] p-6 rounded-lg shadow-sm flex flex-col items-center"
-                            >
-                                <div className='flex gap-5'>
-                                    <img
-                                        src={testimonial.imageSrc}
-                                        alt={testimonial.name}
-                                        className="w-12 h-12 rounded-full mb-4"
-                                    />
-                                    <div>
-                                        <h2 className=" font-semibold mb-1 text-black">{testimonial.name}</h2>
-                                        <p className="text-gray-600 mb-2 text-sm">{testimonial.role}</p>
-                                    </div>
-                                </div>
-
-
-                                <p className="text-gray-800 text-sm">{testimonial.testimonial}</p>
-                            </div>
-                        ))}
-                    </div>
-                    : */}
-            <div className='w-4/5 mx-10 sm:w-full flex justify-center rounded-lg'>
+            <div className=' mx-10 sm:w-full flex justify-center rounded-lg'>
                 <Carousel className='mx-10'>
                     <CarouselContent >
                         {testimonials.map((testimonial, index) => (
                             <CarouselItem
                                 key={index}
-                                className={cn("bg-[#FEF0FE] px-5 py-5 rounded-xl w-4/5 ml-4 ", (isMobile ? "basis-2/3" : "basis-1/3"))}
+                                className={cn("bg-[#FEF0FE] p-10 rounded-xl  ml-4 ", (isMobile ? "basis-2/3" : "basis-1/3"))}
                             >
-                                <div className='flex gap-5'>
+                                <div className='flex gap-5 '>
                                     <img
                                         src={testimonial.imageSrc}
                                         alt={testimonial.name}
                                         className="w-12 h-12 rounded-full mb-4"
                                     />
                                     <div className='flex flex-col gap-0'>
-                                        <h2 className=" font-semibold  text-black">{testimonial.name}</h2>
-                                        <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                                        <h2 className=" font-semibold  text-black mb-1">{testimonial.name}</h2>
+                                        <p className="text-gray-600 text-xs">{testimonial.role}</p>
                                         <StarRating rating={testimonial.rating} />
                                     </div>
                                 </div>
 
 
-                                <p className="text-gray-800 text-sm">{testimonial.testimonial}</p>
+                                <p className="text-gray-800 text-xs pt-5">{testimonial.testimonial}</p>
                             </CarouselItem>
                         ))}
                     </CarouselContent>

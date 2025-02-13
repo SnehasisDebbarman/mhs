@@ -90,7 +90,7 @@ const HorizontalScrollCarousel = () => {
         target: scope,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["30%", "-55%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["15%", "-35%"]);
     const mobileX = useTransform(scrollYProgress, [0, 1], ["10%", "-140%"]);
 
     const isInView = useInView(scope, { once: false, amount: 0.5 });
