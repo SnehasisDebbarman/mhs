@@ -85,13 +85,13 @@ const LatestNews: React.FC = () => {
                         className="relative md:w-1/2  m-6"
                         variants={itemVariants}
                     >
-                        <div className="absolute aspect-square inset-0  w-full top-5"></div>
+                        <div className="absolute aspect-square inset-0  w-full top-4 bg-[#B508B5]" ></div>
 
                         <div className="w-full relative mb-0 mt-4 hover:-ml-5 hover:mt-0 transition-all duration-700">
                             <img src={arrow_right} alt="" className="absolute z-50 right-0" />
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/80 opacity-100 z-0"></div>
                             <div className="absolute bottom-0 left-0 p-4 m-4 border-t border-white z-10">
-                                <h2 className="font-semibold mb-2 hover:scale-105 transition-all">
+                                <h2 className="font-semibold mb-2 hover:scale-105 transition-all text-white">
                                     Developing a lifelong love of Learning
                                 </h2>
                                 <p className="text-white text-sm">
