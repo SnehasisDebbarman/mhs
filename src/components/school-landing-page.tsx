@@ -129,7 +129,7 @@ const LandingPageCarousel = () => {
                                 >
                                     {/* Image Container */}
                                     <motion.div
-                                        className="mx-auto max-w-6xl px-6 py-8 min-h-screen"
+                                        className="mx-auto max-w-6xl px-6 py-8 min-h-screen flex flex-col justify-between"
                                         variants={containerVariants}
                                     >
                                         <motion.div
@@ -176,13 +176,13 @@ const LandingPageCarousel = () => {
                                             >
                                                 <motion.span
                                                     variants={fadeUpVariants}
-                                                    className="block spectral-regular text-6xl "
+                                                    className="block spectral-regular text-7xl sm:text-6xl "
                                                 >
                                                     The First
                                                 </motion.span>
                                                 <motion.span
                                                     variants={fadeUpVariants}
-                                                    className="spectral-regular text-6xl"
+                                                    className="spectral-regular text-7xl sm:text-6xl"
                                                 >
                                                     MIT Model School in {" "}
                                                     <motion.span
@@ -232,7 +232,7 @@ const LandingPageCarousel = () => {
                                 >
                                     {/* Image Container */}
                                     <motion.div
-                                        className="mx-auto max-w-6xl px-6 py-8 min-h-screen"
+                                        className="mx-auto max-w-6xl px-6 py-8 min-h-screen flex flex-col justify-between"
                                         variants={containerVariants}
                                     >
                                         <motion.div
@@ -244,7 +244,7 @@ const LandingPageCarousel = () => {
                                             <motion.div
                                                 // src={first_slide}
                                                 // alt="Modern school building"
-                                                className="w-full aspect-video object-cover rounded-2xl"
+                                                className="w-full aspect-video object-cover rounded-2xl "
                                                 variants={fadeUpVariants}
                                                 initial={{ scale: 1.1 }}
                                                 animate={{ scale: 1 }}
@@ -266,13 +266,13 @@ const LandingPageCarousel = () => {
                                             >
                                                 <motion.span
                                                     variants={fadeUpVariants}
-                                                    className="block spectral-regular "
+                                                    className="block spectral-regular text-7xl sm:text-6xl"
                                                 >
                                                     The First
                                                 </motion.span>
                                                 <motion.span
                                                     variants={fadeUpVariants}
-                                                    className="spectral-regular"
+                                                    className="spectral-regular text-7xl sm:text-6xl"
                                                 >
                                                     MIT Model School in {" "}
                                                     <motion.span

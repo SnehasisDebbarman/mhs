@@ -53,16 +53,16 @@ const testimonials: Testimonial[] = [
 const ParentTestimonials: React.FC = () => {
     const isMobile = useMobileView()
     return (
-        <div className="container mx-auto p-4 max-w-6xl pb-20 sm:pb-0  flex flex-col items-center sm:h-screen">
+        <div className="container mx-auto p-4 max-w-6xl pb-20 sm:pb-0  flex flex-col items-center h-[80vh] sm:h-screen overflow-hidden">
             <h1 className="text-6xl spectral-regular sm:text-3xl font-bold text-center mb-20 text-black">What Parents Says</h1>
 
             <div className=' mx-10 sm:w-full flex justify-center rounded-lg'>
-                <Carousel className='mx-10'>
-                    <CarouselContent >
+                <Carousel className='mx-10 '>
+                    <CarouselContent className=''>
                         {testimonials.map((testimonial, index) => (
                             <CarouselItem
                                 key={index}
-                                className={cn("bg-[#FEF0FE] p-10 rounded-xl  ml-4 ", (isMobile ? "basis-2/3" : "basis-1/3"))}
+                                className={cn("bg-[#FEF0FE] p-10 rounded-xl  ml-8 ", (isMobile ? "basis-3/5" : "basis-1/3"))}
                             >
                                 <div className='flex gap-5 '>
                                     <img

@@ -149,7 +149,7 @@ function RevealBlock({ description, isNearEnd }: RevealBlockProps) {
                 exit={{ opacity: 0 }}
             >
                 <div className="flex flex-col gap-3">
-                    <div className={`text-[12px] sm:text-2xl sm:pr-20 transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-gray-700'
+                    <div className={`text-lg sm:text-2xl sm:pr-20 transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-gray-700'
                         }`}>
                         {description}
                     </div>
