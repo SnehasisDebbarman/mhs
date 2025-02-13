@@ -6,7 +6,6 @@ import invert_comma from "../assets/invert-comma.png";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { useState, useRef } from "react";
 import ContactForm from "./ui/contact-form";
-import React from "react"; // Example image import
 import videoFile from "../assets/video/landing.mp4"; // Import your video
 import { Pause, Play } from "lucide-react";
 
