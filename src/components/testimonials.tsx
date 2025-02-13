@@ -7,8 +7,7 @@ import meena from "../assets/testimonial/meena.png"
 import {
     Carousel,
     CarouselContent,
-    CarouselItem,
-    CarouselDots
+    CarouselItem
 } from "../components/ui/carousel"
 import { cn } from '../lib/utils';
 import StarRating from './ui/star-rating';
@@ -53,7 +52,7 @@ const testimonials: Testimonial[] = [
 const ParentTestimonials: React.FC = () => {
     const isMobile = useMobileView()
     return (
-        <div className="container mx-auto p-4 max-w-6xl pb-20 sm:pb-0  flex flex-col items-center h-[80vh] sm:h-screen overflow-hidden">
+        <div className="container mx-auto p-4 max-w-6xl py-20 sm:pb-32  flex flex-col items-center   overflow-hidden">
             <h1 className="text-6xl spectral-regular sm:text-3xl font-bold text-center mb-20 text-black">What Parents Says</h1>
 
             <div className=' mx-10 sm:w-full flex justify-center rounded-lg'>
@@ -68,7 +67,7 @@ const ParentTestimonials: React.FC = () => {
                                     <img
                                         src={testimonial.imageSrc}
                                         alt={testimonial.name}
-                                        className="w-12 h-12 rounded-full mb-4"
+                                        className="w-16 h-16 rounded-full mb-4 p-1 border border-dashed border-[#FCB6FC]"
                                     />
                                     <div className='flex flex-col gap-0'>
                                         <h2 className=" font-semibold  text-black mb-1">{testimonial.name}</h2>
@@ -82,7 +81,7 @@ const ParentTestimonials: React.FC = () => {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselDots className='-bottom-8' dotButtonActiveClassName='bg-[#B508B5] flex justify-center' dotButtonInactiveClassName='bg-[#B508B5]' />
+                    {/* <CarouselDots className='-bottom-8' dotButtonActiveClassName='bg-[#B508B5] flex justify-center' dotButtonInactiveClassName='bg-[#B508B5]' /> */}
                     {/* <CarouselPrevious className='mt-10 mr-2 bg-[#B508B5]' /> */}
                     {/* <CarouselNext className='mt-10  bg-[#B508B5]' /> */}
                 </Carousel>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useInView, useScroll } from "motion/react";
 import about_us from "../assets/about-us/about-us.png";
+// import useMobileView from "../hooks/useMobileView";
 
 const blocks = [
     {
@@ -18,6 +19,7 @@ const blocks = [
 ];
 
 function AboutUs() {
+    // const isMobile = useMobileView()
     const [isNearEnd, setIsNearEnd] = useState(false);
     const containerRef = React.useRef(null);
     const { scrollYProgress } = useScroll({
@@ -34,11 +36,11 @@ function AboutUs() {
         return () => unsubscribe();
     }, [scrollYProgress]);
 
-    const isInView = useInView(containerRef, { amount: 0.2 });
+    // const isInView = useInView(containerRef, { amount: 0.3 });
 
     return (
         <div style={{
-            backgroundColor: !isInView ? "#7B057B" : "white",
+            // backgroundColor: !isInView ? "#7B057B" : "white",
             transition: 'opacity 0.5s ease-in-out'
         }}>
             <div
@@ -46,18 +48,18 @@ function AboutUs() {
                 className={`flex min-h-[200vh] flex-col sm:flex-row mx-auto max-w-7xl transition-colors duration-700 bg-purple-600'
                 }`}
                 style={{
-                    opacity: isInView ? 1 : 0,
+                    // opacity: isInView ? 1 : 0,
                     transition: 'opacity 0.5s ease-in-out'
                 }}
             >
                 {/* Left Fixed Image Section */}
                 <motion.div
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1.5 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    layout
-                    className="visible w-full sm:w-1/2 relative p-4 sm:p-20 rounded">
+                    // initial={{ width: 0 }}
+                    // transition={{ duration: 1.5, }}
+                    // whileInView={{ width: isMobile ? "100%" : "50%" }}
+                    // exit={{ width: 0 }}
+                    // layout
+                    className="visible sm:w-1/2 relative p-4 sm:p-20 rounded">
                     <img
                         src={about_us}
                         alt="Placeholder"
@@ -69,8 +71,7 @@ function AboutUs() {
                 <div
                     style={{
                         // marginTop: isInView ? 0 : -100,
-                        opacity: isInView ? 1 : 0,
-
+                        // opacity: isInView ? 1 : 0,
                         transition: 'all 0.5s ease-in-out'
                     }}
                     className="w-full sm:w-1/2 relative mb-20">
@@ -84,15 +85,9 @@ function AboutUs() {
                         exit={{
                             background: "#B508B5"
                         }}
-                        // style={{
-                        //     marginTop: isInView ? 0 : -100,
-                        //     opacity: isInView ? 1 : 0,
-                        //     background: !isNearEnd ? "white" : "#B508B5",
-                        //     transition: 'all 0.7s ease-in-out'
-                        // }}
                         className={'sticky top-0 pt-10 pl-5  z-40'}
                     >
-                        <div className={`spectral-light  transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-[#B508B5]'
+                        <div className={`spectral-light pt-20 pb-4  transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-[#B508B5]'
                             }`}>
                             About Us
                         </div>
@@ -135,7 +130,7 @@ function RevealBlock({ description, isNearEnd }: RevealBlockProps) {
         <div>
             <motion.div
                 ref={ref}
-                className={`left-0 w-full h-[50vh] sm:h-[80vh] snap-center snap-normal snap-y p-8 rounded-md flex items-center justify-center text-2xl mb-4 transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-gray-900'
+                className={`left-0 w-full h-[50vh] sm:h-[80vh] snap-center snap-normal snap-y p-8 pl-4 rounded-md flex items-center justify-center text-2xl mb-4 transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-gray-900'
                     }`}
                 initial={{ opacity: 0 }}
                 animate={{
@@ -149,7 +144,7 @@ function RevealBlock({ description, isNearEnd }: RevealBlockProps) {
                 exit={{ opacity: 0 }}
             >
                 <div className="flex flex-col gap-3">
-                    <div className={`text-lg sm:text-2xl sm:pr-20 transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-gray-700'
+                    <div className={`text-lg sm:text-xl sm:pr-20 transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-gray-700'
                         }`}>
                         {description}
                     </div>

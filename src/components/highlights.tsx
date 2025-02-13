@@ -1,12 +1,12 @@
 import { motion, useTransform, useScroll, useAnimate, useInView } from "framer-motion";
 import React, { useEffect } from "react";
-import highlight_bg from "../assets/highlight_bg.png";
+// import highlight_bg from "../assets/highlight_bg.png";
 import useMobileView from "../hooks/useMobileView";
 
-import first from "../assets/highlights/first.png"
-import qoute_left from "../assets/highlights/quote_left.png"
-import quote_right from "../assets/highlights/quote_right.png"
-import start from "../assets/highlights/start.png"
+import first from "../assets/highlights/first.svg"
+import qoute_left from "../assets/highlights/quote_left.svg"
+import quote_right from "../assets/highlights/quote_right.svg"
+import start from "../assets/highlights/start.svg"
 
 type CardType = {
     url: string;
@@ -112,13 +112,15 @@ const HorizontalScrollCarousel = () => {
     }, [isInView, animate, scope]);
 
     return (
-        <section ref={scope} className="relative h-[400vh] sm:h-[350vh] mx-auto">
-            <div className="sticky top-0 flex flex-col h-screen overflow-hidden bg-center bg-cover" style={{
-                backgroundImage: `url(${highlight_bg})`
+        <section ref={scope} className="relative h-[400vh] sm:h-[350vh] mx-auto bg-[#7B057B]">
+            <div className="max-w-6xl px-5 sm:px-52 pt-20 sm:pt-40">
+                <h3 className="text-xl text-balance sm:text-5xl spectral-regular pt-5 pb-6 text-white">Unlocking Your Child's Full Potential at MHS Junior School with MIT</h3>
+            </div>
+            <div className="sticky top-0 flex flex-col h-screen overflow-hidden bg-center bg-cover " style={{
+                // backgroundImage: `url(${highlight_bg})`
             }}>
                 <div className="max-w-6xl px-5 sm:px-52">
-                    <h3 className="text-xl sm:text-4xl spectral-regular pt-5 pb-6 text-white">Unlocking Your Child's Full Potential at MHS Junior School with MIT</h3>
-                    <p className="text-[12px] sm:text-sm text-white">We pioneer the MIT Model in Sikar, blending innovation with tradition to foster a dynamic learning environment that nurtures each child's unique potential through exceptional teaching. At MHS, students discover their passions and what inspires them, laying the foundation for success in school, work, and life. Our curriculum integrates diverse intelligences—linguistic, musical, spatial, bodily-kinesthetic, interpersonal, intrapersonal, naturalistic, and existential—to create a holistic and engaging learning experience.</p>
+                    <p className="text-[12px] text-balance sm:text-sm text-white">We pioneer the MIT Model in Sikar, blending innovation with tradition to foster a dynamic learning environment that nurtures each child's unique potential through exceptional teaching. At MHS, students discover their passions and what inspires them, laying the foundation for success in school, work, and life. Our curriculum integrates diverse intelligences—linguistic, musical, spatial, bodily-kinesthetic, interpersonal, intrapersonal, naturalistic, and existential—to create a holistic and engaging learning experience.</p>
                     <div className=" cursor-pointer my-8 rounded-full text-[#7B057B] bg-white p-3 px-6 float-left max-w-max font-semibold text-sm hover:scale-105 transition-all duration-500">key highlights</div>
                 </div>
                 <motion.div style={{ x: isMobile ? mobileX : x }} className="flex gap-4 w-[150vw]">
@@ -151,7 +153,7 @@ const Card = ({ card }: { card: CardType }) => {
                     width: "100%",
                     aspectRatio: card.aspect ?? "auto"
                 }
-            } className="bg-neutral-200 p-7 sm:p-10 rounded-lg w-[80vw] sm:w-full">
+            } className="bg-white p-7 sm:p-10 rounded-lg w-[80vw] sm:w-full">
                 <img
                     src={card.url}
                     alt={card.title}

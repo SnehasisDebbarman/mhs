@@ -1,14 +1,14 @@
 import { motion, useTransform, useScroll, useAnimate, useInView } from "motion/react";
 import { useEffect, useRef } from "react";
 // import curriculum_bg from "../assets/curriculum_bg.jpeg";
-import bodily from "../assets/curriculum_logo/bodily.png";
-import interpersonal from "../assets/curriculum_logo/interpersonal.png";
-import language from "../assets/curriculum_logo/Language.png";
-import logic from "../assets/curriculum_logo/logic.png";
-import music from "../assets/curriculum_logo/music.png";
-import nature from "../assets/curriculum_logo/nature.png";
-import visual from "../assets/curriculum_logo/visual.png";
-import life from "../assets/curriculum_logo/life.png";
+import bodily from "../assets/curriculum_logo/bodily.svg";
+import interpersonal from "../assets/curriculum_logo/interpersonal.svg";
+import language from "../assets/curriculum_logo/language.svg";
+import logic from "../assets/curriculum_logo/logic.svg";
+import music from "../assets/curriculum_logo/music.svg";
+import nature from "../assets/curriculum_logo/nature.svg";
+import visual from "../assets/curriculum_logo/visual.svg";
+import life from "../assets/curriculum_logo/life.svg";
 import useMobileView from "../hooks/useMobileView";
 import curriculum_bg from "../assets/curriculum/curriculum.png";
 
@@ -66,7 +66,7 @@ const HorizontalScrollCarousel = () => {
     const mobileX = useTransform(scrollYProgress, [0, 1], ["20%", "-130%"]);
 
     return (
-        <section ref={targetRef} className="relative h-[350vh] mx-auto pt-10  sm:pt-46 text-black ">
+        <section ref={targetRef} className="relative h-[350vh] mx-auto pt-10  sm:pt-0 text-black ">
             <div className="sticky top-0 flex flex-col h-screen  overflow-hidden bg-cover bg-center px-8  " style={{ backgroundImage: `url(${curriculum_bg})` }}>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/90 to-black/90 opacity-100 z-10"></div>
                 <div className="max-w-6xl mx-auto h-screen flex  flex-col z-20 pb-20 sm:pb-32 overflow-hidden">
@@ -76,11 +76,11 @@ const HorizontalScrollCarousel = () => {
                             <h2 className="w-[240px] leading-tight text-3xl sm:text-5xl spectral-regular pt-5 pb-6 sm:pb-6 text-white md:w-3/5">A Curriculum Designed for
                                 Every Child’s Success</h2>
                         </div>
-                        <div className="flex flex-col  sm:flex-row   ">
+                        <div className="flex flex-col  sm:flex-row ">
                             <div className="flex flex-col sm:flex-row gap-4">
 
                                 {
-                                    categories.map((category, i) => <div className={(i === 0 ? "" : "border-l border-purple-300 ") + "px-4 sm:h-[160px] " + (isMobile && "border-l border-purple-300 ")}>
+                                    categories.map((category, i) => <div className={(i === 0 ? "" : "border-l border-purple-300 ") + "px-4 sm:h-[140px]  sm:w-[170px] " + (isMobile && "border-l border-purple-300 ")}>
                                         <h3 className="text-sm sm:text-xl font-semibold sm:pb-4 spectral-regular text-white max-w-min">{category.category}</h3>
                                         <p className="text-white text-[10px] sm:text-[12px]">{category.description}</p>
 
@@ -111,7 +111,7 @@ const Card = ({ card }: { card: CardType }) => {
     return (
         <div
             key={card.id}
-            className="group relative h-[150px] min-w-[200px] overflow-hidden bg-neutral-200 p-5 rounded-lg"
+            className="group relative h-[150px] min-w-[200px] overflow-hidden bg-white p-5 rounded-lg"
         >
             <div
                 style={{
@@ -121,7 +121,11 @@ const Card = ({ card }: { card: CardType }) => {
                 }}
                 className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
             ></div>
-            <img src={card.url} alt={card.title} className=" inset-0 z-0 object-cover p-3 rounded-full mb-2  bg-[#B508B5]" />
+            <div className="p-3 mb-2  bg-[#B508B5] max-w-max rounded-full">
+                <img src={card.url} alt={card.title} className="size-5" />
+
+            </div>
+
 
             <p className="text-xl  text-black spectral-light">
                 {card.title}

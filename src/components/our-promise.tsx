@@ -40,9 +40,9 @@ const OurPromise: React.FC = () => {
     return (
         <div
             ref={ref}
-            className="flex flex-col md:flex-row items-center justify-center p-8 max-w-6xl mx-auto rounded-lg relative"
+            className=" flex flex-col md:flex-row items-center justify-center p-8 sm:py-20 max-w-6xl mx-auto rounded-lg relative"
         >
-            <div className="md:w-1/2 p-4 flex flex-col justify-center">
+            <div className="md:w-1/2 p-4 flex flex-col justify-center ">
 
 
 
@@ -69,7 +69,7 @@ const OurPromise: React.FC = () => {
                     animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                     exit={{ opacity: 0, y: 20 }} // Reverse of enter
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="text-lg text-gray-700 mb-6"
+                    className="text-lg sm:text-sm text-gray-700 mb-6"
                 >
                     An innovative curriculum that sparks academic curiosity and fuels a passion for learning. Our classrooms are spaces where challenging questions are embraced, deepening understanding and critical thinking. Every student is valued and welcomed for who they are, creating a supportive environment that nurtures individuality.
                 </motion.p>
@@ -78,7 +78,7 @@ const OurPromise: React.FC = () => {
                     animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                     exit={{ opacity: 0, y: 20 }} // Reverse of enter
                     transition={{ duration: 0.7, delay: 0.8 }}
-                    className="text-lg text-gray-700 mb-6"
+                    className="text-lg sm:text-sm text-gray-700 mb-6"
                 >
                     By recognizing and fostering each student's unique potential, we empower them to grow, thrive, and succeed. This is Matrix High School. This is where you belong.
                 </motion.p>

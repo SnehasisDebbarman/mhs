@@ -3,7 +3,11 @@ import mhs_logo from "../assets/mhs_logo.png"
 import first_slide from "../assets/landing-page/first-slide.png"
 import second_slide from "../assets/landing-page/second-slide.png"
 import invert_comma from "../assets/invert-comma.png"
-import { Carousel, CarouselContent, CarouselItem, CarouselDots } from './ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
+import { useState } from 'react';
+import ContactForm from './ui/contact-form';
+
+
 
 
 const fadeUpVariants = {
@@ -29,6 +33,15 @@ const containerVariants = {
     }
 };
 const Header = () => {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+
+    const openForm = () => {
+        setIsFormOpen(true);
+    };
+
+    const closeForm = () => {
+        setIsFormOpen(false);
+    };
     return (<motion.header
         className="absolute z-20  w-[100vw] flex justify-between items-center mx-auto "
         variants={containerVariants}
@@ -55,52 +68,53 @@ const Header = () => {
                     variants={fadeUpVariants}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={openForm}
                 >
                     Apply Now
                 </motion.button>
             </motion.div>
         </div>
+        {isFormOpen && <ContactForm onClose={closeForm} />}
     </motion.header>)
 }
+
 const Quote = () => {
+    const textVariants = {
+        hidden: {
+            opacity: 0,
+            y: 50, // Start 50px below its final position
+        },
+        visible: {
+            opacity: 1,
+            y: 0, // Animate to its original position
+            transition: {
+                duration: 1.5, // Adjust the duration as needed
+                ease: "easeInOut", // You can experiment with different easing functions
+            },
+        },
+    };
 
-
-    return (<motion.div
-        // ref={scope}
-        className="bg-[#030817] opacity-0 text-white h-screen flex justify-center text-center"
-        variants={fadeUpVariants}
-        whileInView="visible"
-    // viewport={{ once: true }}
-    >
-        <motion.div
-            className="max-w-4xl mx-auto px-6 text-center flex justify-center items-center flex-col"
-            variants={containerVariants}
-        >
-            <motion.div
-                className="flex justify-center mb-6"
-                variants={fadeUpVariants}
-                // whileHover={{ scale: 1.1, rotate: 360 }}
-                transition={{ duration: 0.8 }}
-            >
-                <img
-                    className="size-20"
-                    src={invert_comma}
+    return (
+        <div className="bg-[#030817] text-white h-[110vh] flex justify-center text-center">
+            <div className="max-w-4xl mx-auto px-6 text-center flex justify-center items-center flex-col">
+                <div className="flex justify-center mb-6">
+                    <motion.img variants={textVariants} initial="hidden"
+                        whileInView="visible" className="size-20" src={invert_comma} alt="Inverted Comma" />
+                </div>
+                <motion.p
+                    className="text-4xl font-light leading-relaxed spectral-regular "
+                    variants={textVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                // viewport={{ once: true }}
                 >
-                </img>
-            </motion.div>
-            <motion.p
-                className="text-4xl font-light leading-relaxed spectral-regular "
-                variants={fadeUpVariants}
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                A family of leading independent day school based in
-                Sikar City offering an exceptional education for boys
-                and girls aged 3 to 18
-            </motion.p>
-        </motion.div>
-    </motion.div>)
-}
+                    A family of leading independent day school based in Sikar City offering
+                    an exceptional education for boys and girls aged 3 to 18
+                </motion.p>
+            </div>
+        </div>
+    );
+};
 
 const LandingPageCarousel = () => {
     return (
@@ -295,7 +309,7 @@ const LandingPageCarousel = () => {
 
 
                 </CarouselContent>
-                <CarouselDots />
+                {/* <CarouselDots /> */}
                 {/* <CarouselPrevious className='absolute bg-[#B508B5]' /> */}
                 {/* <CarouselNext className='absolute  bg-[#B508B5]' /> */}
             </Carousel >

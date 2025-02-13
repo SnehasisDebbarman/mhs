@@ -3,13 +3,13 @@ import joining_mhs from "../assets/joining-mhs/joining-mhs.png"
 
 const JoiningMHS: React.FC = () => {
     return (
-        <div className="flex flex-col h-full md:flex-row items-center justify-center p-4  max-w-6xl mx-auto">
-            <div className="w-full h-[70vh] md:w-1/2 p-6 py-12 bg-[#7B057B] text-white">
-                <h1 className="text-3xl font-bold mb-4 spectral-medium">Joining MHS</h1>
-                <p className="text-sm mb-6">
+        <div className="flex  flex-col h-full md:flex-row items-center justify-center p-4  max-w-6xl mx-auto">
+            <div className="w-full h-[70vh] md:w-1/2 p-6 sm:p-12 sm:pl-20 py-12 mx-auto  flex flex-col justify-center  bg-[#7B057B] text-white ">
+                <h1 className="text-3xl font-bold mb-4 spectral-medium ">Joining MHS</h1>
+                <p className="text-sm mb-6 sm:pr-20">
                     We are proud to offer a seamless educational journey through our Junior Schools. Each stage has its own vibrant character, welcoming students at various entry points.
                 </p>
-                <p className="text-sm mb-6">
+                <p className="text-sm mb-6 sm:pr-20">
                     Regardless of your child’s age, our dedicated Admissions team is here to guide you through the process and address any questions you may have, ensuring a smooth transition into the MHS community.
                 </p>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">

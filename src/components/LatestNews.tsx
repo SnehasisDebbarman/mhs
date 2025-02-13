@@ -24,13 +24,14 @@ const Modal: React.FC<ModalProps> = ({ pdfVisible, onClose, sample }) => {
 
     return (
         <div onClick={handleOverlayClick} className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black/70 bg-opacity-50 z-[100]">
-            <div className="modalContent relative bg-white p-4 rounded shadow-lg">
-                <button onClick={onClose} className=" absolute mb-2 text-red-300 right-5">
+            <div className="modalContent relative bg-[#B508B5] p-4 rounded shadow-lg">
+                <button onClick={onClose} className=" absolute mb-2 text-white right-5">
                     <X />
                 </button>
                 <iframe
                     src={sample}
-                    style={{ height: 500, width: 500, paddingTop: 30 }}
+                    className="max-w-6xl w-[80vw] h-[80vh] rounded"
+                    style={{ paddingTop: 30 }}
                     frameBorder="0"
                 ></iframe>
             </div>
