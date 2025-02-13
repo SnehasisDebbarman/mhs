@@ -61,7 +61,7 @@ const OurPromise: React.FC = () => {
                     animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                     exit={{ opacity: 0, y: 20 }} // Reverse of enter
                     transition={{ duration: 0.7, delay: 0.2 }}
-                    className="spectral-medium text-[#B508B5] mb-4"
+                    className="spectral-medium text-[#B508B5] mb-4 text-lg"
                 >
                     Our Offer
                 </motion.p>
@@ -70,7 +70,7 @@ const OurPromise: React.FC = () => {
                     animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                     exit={{ opacity: 0, y: 20 }} // Reverse of enter
                     transition={{ duration: 0.7, delay: 0.4 }}
-                    className="text-5xl font-bold text-gray-950 mb-4 spectral-medium "
+                    className="text-5xl font-bold text-gray-950 mb-4 spectral-medium p-4 pl-0 pt-0"
                 >
                     Our Promise to Our Students & Families
                 </motion.h1>

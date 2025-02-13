@@ -63,7 +63,7 @@ function AboutUs() {
                     <img
                         src={about_us}
                         alt="Placeholder"
-                        className="sticky top-10 w-full sm:h-[80vh] object-cover rounded-sm"
+                        className="sticky top-10 w-full sm:h-[80vh] object-cover"
                     />
                 </motion.div>
 
@@ -87,7 +87,7 @@ function AboutUs() {
                         }}
                         className={'sticky top-0 pt-10 pl-5  z-40'}
                     >
-                        <div className={`spectral-light pt-20 pb-4  transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-[#B508B5]'
+                        <div className={`spectral-light pt-20 pb-4 text-lg  transition-colors duration-700 ${isNearEnd ? 'text-white' : 'text-[#B508B5]'
                             }`}>
                             About Us
                         </div>
@@ -135,7 +135,7 @@ function RevealBlock({ description, isNearEnd }: RevealBlockProps) {
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: isInView ? 1 : 0,
-                    y: isInView ? 100 : 0,
+                    // y: isInView ? 100 : 0,
                     transition: {
                         duration: 0.5,
                         delay: isInView ? 0 : 0

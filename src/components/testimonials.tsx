@@ -55,13 +55,13 @@ const ParentTestimonials: React.FC = () => {
         <div className="container mx-auto p-4 max-w-6xl py-20 sm:pb-32  flex flex-col items-center   overflow-hidden">
             <h1 className="text-6xl spectral-regular sm:text-3xl font-bold text-center mb-20 text-black">What Parents Says</h1>
 
-            <div className=' mx-10 sm:w-full flex justify-center rounded-lg'>
-                <Carousel className='mx-10 '>
-                    <CarouselContent className='p-5 gap-2'>
+            <div className='sm:w-full flex justify-center rounded-lg'>
+                <Carousel className=''>
+                    <CarouselContent className='gap-5 ml-2'>
                         {testimonials.map((testimonial, index) => (
                             <CarouselItem
                                 key={index}
-                                className={cn("bg-[#FEF0FE] p-10 rounded-xl ", (isMobile ? "basis-3/5" : "basis-1/3"))}
+                                className={cn("bg-[#FEF0FE] p-10  rounded-xl ", (isMobile ? "basis-3/5" : "basis-[32%]"))}
                             >
                                 <div className='flex gap-5 '>
                                     <img

@@ -63,10 +63,10 @@ const LatestNews: React.FC = () => {
                         className="w-full  md:w-1/2 p-6"
                         variants={itemVariants}
                     >
-                        <p className="spectral-medium text-[#B508B5] mb-4">
+                        <p className="spectral-medium text-[#B508B5] mb-4 text-lg">
                             Featured News & Article
                         </p>
-                        <h2 className="text-5xl font-bold text-gray-950 mb-4 spectral-medium sm:w-3/5">
+                        <h2 className="text-5xl font-bold text-gray-950 mb-4 spectral-medium sm:w-4/5">
                             Latest News from MHS
                         </h2>
                         <p className="text-lg text-gray-700 mb-6">

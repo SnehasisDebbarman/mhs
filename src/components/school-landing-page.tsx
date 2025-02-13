@@ -178,7 +178,7 @@ const VideoCarouselItem = () => {
                             variants={containerVariants}
                         >
                             <motion.div
-                                className="relative rounded-2xl overflow-hidden my-12 "
+                                className="relative rounded-2xl overflow-hidden my-12 mt-2 "
                                 variants={fadeUpVariants}
                                 whileInView="visible"
                                 viewport={{ once: true }}

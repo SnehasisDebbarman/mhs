@@ -62,7 +62,7 @@ const HorizontalScrollCarousel = () => {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["20%", "-50%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["10%", "-110%"]);
     const mobileX = useTransform(scrollYProgress, [0, 1], ["20%", "-130%"]);
 
     return (
@@ -72,8 +72,8 @@ const HorizontalScrollCarousel = () => {
                 <div className="max-w-6xl mx-auto h-screen flex  flex-col z-20 pb-20 sm:pb-32 overflow-hidden">
                     <div className="flex flex-col sm:flex-row justify-between pt-10 sm:pt-28">
                         <div>
-                            <p className="text-[#F97BF9] sm:mb-3  spectral-regular text-lg sm:text-xl">Curriculum</p>
-                            <h2 className="w-[240px] leading-tight text-3xl sm:text-5xl spectral-regular pt-5 pb-6 sm:pb-6 text-white md:w-3/5">A Curriculum Designed for
+                            <p className="text-[#F97BF9] sm:mb-2  spectral-regular text-lg sm:text-xl">Curriculum</p>
+                            <h2 className="w-[240px] leading-tight text-3xl sm:text-5xl spectral-regular pt-2 pb-6 sm:pb-6 text-white md:w-3/5">A Curriculum Designed for
                                 Every Child’s Success</h2>
                         </div>
                         <div className="flex flex-col  sm:flex-row ">
@@ -111,7 +111,7 @@ const Card = ({ card }: { card: CardType }) => {
     return (
         <div
             key={card.id}
-            className="group relative h-[150px] min-w-[200px] overflow-hidden bg-white p-5 rounded-lg"
+            className="group relative h-[150px] min-w-[200px] sm:min-w-[280px] overflow-hidden bg-white p-5 rounded-lg"
         >
             <div
                 style={{
