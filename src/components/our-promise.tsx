@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import our_promise from "../assets/our-promise/our-promise.png";
+import ContactForm from './ui/contact-form';
 
 // Define the component
 const OurPromise: React.FC = () => {
-    const [isInView, setIsInView] = React.useState(false);
+    const [isInView, setIsInView] = useState(false);
     const ref = React.useRef(null);
+    const [isFormOpen, setIsFormOpen] = useState(false);
+
+    const openForm = () => {
+        setIsFormOpen(true);
+    };
+
+    const closeForm = () => {
+        setIsFormOpen(false);
+    };
 
     React.useEffect(() => {
         // Check if the ref is available and update the state
@@ -83,6 +93,7 @@ const OurPromise: React.FC = () => {
                     By recognizing and fostering each student's unique potential, we empower them to grow, thrive, and succeed. This is Matrix High School. This is where you belong.
                 </motion.p>
                 <motion.div
+                    onClick={openForm}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                     exit={{ opacity: 0, y: 20 }} // Reverse of enter
@@ -106,6 +117,7 @@ const OurPromise: React.FC = () => {
                     className="sm:w-3/4 aspect-[3/4] object-cover"
                 />
             </div>
+            {isFormOpen && <ContactForm onClose={closeForm} />}
         </div>
     );
 };

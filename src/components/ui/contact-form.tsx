@@ -5,8 +5,14 @@ interface Props {
 }
 
 const ContactForm: React.FC<Props> = ({ onClose }) => {
+    const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        // Close the modal only if the overlay is clicked
+        if (e.currentTarget === e.target) {
+            onClose();
+        }
+    };
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/60 z-50">
+        <div onClick={handleOverlayClick} className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/60 z-50">
             <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12 relative sm:w-full w-[80vw] sm:max-w-3xl">
                 {/* Close Button */}
                 <button

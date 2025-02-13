@@ -3,41 +3,10 @@ import { motion, useInView } from "framer-motion";
 import letest_img from "../assets/latest-news/latest-news.png";
 import arrow_right from "../assets/arrow-right.svg";
 import arrow from "../assets/Arrow.svg"
-import sample from "../assets/pdf/sample.pdf"
-import { X } from 'lucide-react';
+import sample from "../assets/pdf/mhs.pdf"
+import PDFView from "./ui/PDFView";
 
-interface ModalProps {
-    pdfVisible: boolean;
-    onClose: () => void;
-    sample: string; // URL of the PDF to display
-}
 
-const Modal: React.FC<ModalProps> = ({ pdfVisible, onClose, sample }) => {
-    if (!pdfVisible) return null; // Don't render anything if not visible
-
-    const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        // Close the modal only if the overlay is clicked
-        if (e.currentTarget === e.target) {
-            onClose();
-        }
-    };
-
-    return (
-        <div onClick={handleOverlayClick} className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black/70 bg-opacity-50 z-[100]">
-            <div className="modalContent relative bg-[#B508B5] p-4 rounded shadow-lg">
-                <button onClick={onClose} className=" absolute mb-2 text-white right-5">
-                    <X />
-                </button>
-                <iframe
-                    src={sample}
-                    className="max-w-6xl w-[80vw] h-[80vh] rounded"
-                    style={{ paddingTop: 30 }}
-                    frameBorder="0"
-                ></iframe>
-            </div>
-        </div>
-    );
-};
 
 const LatestNews: React.FC = () => {
     const [pdfVisible, setPdfVisible] = useState(false)
@@ -89,9 +58,9 @@ const LatestNews: React.FC = () => {
                 animate={inView ? "visible" : "hidden"}
                 exit="hidden"
             >
-                <div className="flex flex-col md:flex-row items-center justify-center p-4 max-w-6xl mx-auto">
+                <div className="flex h-screen flex-col md:flex-row items-center justify-center  p-4 max-w-6xl mx-auto">
                     <motion.div
-                        className="w-full md:w-1/2 p-6"
+                        className="w-full  md:w-1/2 p-6"
                         variants={itemVariants}
                     >
                         <p className="spectral-medium text-[#B508B5] mb-4">
@@ -113,10 +82,10 @@ const LatestNews: React.FC = () => {
                         </button>
                     </motion.div>
                     <motion.div
-                        className="relative md:w-1/2 h-screen"
+                        className="relative md:w-1/2  m-6"
                         variants={itemVariants}
                     >
-                        <div className="absolute aspect-square inset-0 bg-purple-300 w-full top-5"></div>
+                        <div className="absolute aspect-square inset-0  w-full top-5"></div>
 
                         <div className="w-full relative mb-0 mt-4 hover:-ml-5 hover:mt-0 transition-all duration-700">
                             <img src={arrow_right} alt="" className="absolute z-50 right-0" />
@@ -140,7 +109,7 @@ const LatestNews: React.FC = () => {
                 </div>
 
             </motion.div>
-            <Modal pdfVisible={pdfVisible} onClose={toggleModal} sample={sample} />
+            <PDFView pdfVisible={pdfVisible} onClose={toggleModal} mhs={sample} />
         </div>
     );
 };

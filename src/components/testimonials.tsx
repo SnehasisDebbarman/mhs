@@ -57,11 +57,11 @@ const ParentTestimonials: React.FC = () => {
 
             <div className=' mx-10 sm:w-full flex justify-center rounded-lg'>
                 <Carousel className='mx-10 '>
-                    <CarouselContent className=''>
+                    <CarouselContent className='p-5 gap-2'>
                         {testimonials.map((testimonial, index) => (
                             <CarouselItem
                                 key={index}
-                                className={cn("bg-[#FEF0FE] p-10 rounded-xl  ml-8 ", (isMobile ? "basis-3/5" : "basis-1/3"))}
+                                className={cn("bg-[#FEF0FE] p-10 rounded-xl ", (isMobile ? "basis-3/5" : "basis-1/3"))}
                             >
                                 <div className='flex gap-5 '>
                                     <img
