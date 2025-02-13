@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import mhs_logo from "../assets/mhs_logo.png";
+import mhs_logo from "../assets/mhs_logo.svg";
 import first_slide from "../assets/landing-page/first-slide.png";
 import second_slide from "../assets/landing-page/second-slide.png";
 import invert_comma from "../assets/invert-comma.png";

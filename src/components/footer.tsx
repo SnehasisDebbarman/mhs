@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import mhs_logo from '../assets/mhs_logo.png';
-import cbse_logo from '../assets/cbse_logo.png';
+import mhs_logo from '../assets/mhs_logo.svg';
+import cbse_logo from '../assets/cbse_logo.svg';
 import send from "../assets/footer/Send.svg"
 import prospectus from "../assets/footer/prospectus.svg"
 import PDFView from './ui/PDFView';
@@ -17,12 +17,12 @@ const Footer: React.FC = () => {
                 <div className="sm:flex sm:justify-between  my-12 sm:my-20">
                     <div className="mb-6 md:mb-0 sm:w-1/2">
                         <a href="#" className="flex items-center">
-                            <img src={mhs_logo} className="h-8 me-3" alt="FlowBite Logo" />
+                            <img src={mhs_logo} className="h-12 me-3" alt="FlowBite Logo" />
                         </a>
                         <h3 className='text-3xl my-5 sm:w-2/3 text-white'>The First <strong>MIT Model Junior School</strong>  in Sikar</h3>
-                        <div className='flex flex-col '>
-                            <img src={cbse_logo} className="w-16 me-3" alt="FlowBite Logo" />
-                            <p className='text-center w-16 text-[10px] text-white'>Affiliated to <br /> <strong className='text-center'>CBSE</strong></p>
+                        <div className='flex flex-col'>
+                            <img src={cbse_logo} className="w-20 " alt="FlowBite Logo" />
+                            <p className='text-center w-20 text-[13px] text-white'>Affiliated to <br /> <strong className='text-center'>CBSE</strong></p>
 
                         </div>
 
